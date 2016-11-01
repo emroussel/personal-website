@@ -369,6 +369,10 @@ form {
   float: right; }
 .u-pull-left {
   float: left; }
+.u-center {
+  text-align: center; }
+.u-no-text-decoration {
+  text-decoration: none; }
 
 
 /* Misc
@@ -391,6 +395,16 @@ hr {
   display: table;
   clear: both; }
 
+/* Custom classes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.social-media-logo {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  opacity: 0.6; }
+
+.social-media-logo:hover {
+  opacity: 1; }
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
