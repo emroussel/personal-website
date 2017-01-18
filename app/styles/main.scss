@@ -24,3 +24,28 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+.row {
+  align-content: flex-start;
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.column  {
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-basis: 100%;
+}
+
+.column.column-xs-3  {
+  flex-basis: 25%;
+}
+
+.column.column-xs-4  {
+  flex-basis: 33.333333%;
+}
+
+.column.column-xs-6  {
+  flex-basis: 50%;
+}
