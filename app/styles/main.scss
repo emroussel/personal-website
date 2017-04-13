@@ -1,0 +1,61 @@
+/*
+Note: any .css or .scss files included in the 'styles' directory
+will be correctly compiled during `gulp serve` and `gulp`
+ */
+
+/*
+Variables
+*/
+$text-font: 'Nunito', 'Helvetica', sans-serif;
+$title-font: 'Hind', 'Helvetica', sans-serif;
+$gray: #58595B;
+$primary-color: #003049;
+$secondary-color: #CFCFB4;
+
+/*
+Basic styles
+*/
+body {
+  font-family: $text-font;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $gray; }
+
+/*
+Typography
+*/
+html { font-size: 62.5%; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700; }
+h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+p {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+/*
+Flexbox Grid
+*/
+.row {
+  align-content: flex-start;
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap; }
+.column  {
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-basis: 100%; }
+.column.column-xs-3  { flex-basis: 25%; }
+.column.column-xs-4  { flex-basis: 33.333333%; }
+.column.column-xs-6  { flex-basis: 50%; }
