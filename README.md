@@ -1,6 +1,6 @@
-# emmanuelroussel.github.io
+# emroussel.xyz
 
-Basic website about me. Based on [Google's Web Starter Kit](https://developers.google.com/web/tools/starter-kit/).
+Basic website about me hosted [here](https://emroussel.xyz). Based on [Google's Web Starter Kit](https://developers.google.com/web/tools/starter-kit/).
 
 ## Getting Started
 
