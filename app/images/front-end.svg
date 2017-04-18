@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="4577 2435 649 473">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="5481 1299 649 473">
   <defs>
     <style>
       .cls-1 {
-        clip-path: url(#clip-front-end);
+        clip-path: url(#clip-Artboard_2);
       }
 
-      .cls-2, .cls-8 {
+      .cls-2, .cls-7 {
         fill: none;
       }
 
@@ -14,7 +14,7 @@
         stroke-width: 10px;
       }
 
-      .cls-3, .cls-9 {
+      .cls-3 {
         fill: rgba(0,0,0,0);
       }
 
@@ -22,46 +22,47 @@
         fill: #003049;
       }
 
-      .cls-5, .cls-6 {
+      .cls-5 {
         fill: #fff;
       }
 
       .cls-6 {
-        font-size: 200px;
-        font-family: Hind-Light, Hind;
-        font-weight: 300;
-      }
-
-      .cls-7 {
         stroke: none;
       }
+
+      .cls-8 {
+        fill: rgba(255,255,255,0);
+      }
     </style>
-    <clipPath id="clip-front-end">
-      <rect x="4577" y="2435" width="649" height="473"/>
+    <clipPath id="clip-Artboard_2">
+      <rect x="5481" y="1299" width="649" height="473"/>
     </clipPath>
   </defs>
-  <g id="front-end" class="cls-1">
-    <rect class="cls-9" x="4577" y="2435" width="649" height="473"/>
-    <path id="Path_49" data-name="Path 49" class="cls-2" d="M0,0H593" transform="translate(4577.5 2776.5)"/>
-    <g id="Rectangle_300" data-name="Rectangle 300" class="cls-2" transform="translate(4577 2435)">
-      <rect class="cls-7" width="593" height="396" rx="17"/>
-      <rect class="cls-8" x="5" y="5" width="583" height="386" rx="12"/>
+  <g id="Artboard_2" data-name="Artboard – 2" class="cls-1">
+    <rect class="cls-8" x="5481" y="1299" width="649" height="473"/>
+    <g id="Rectangle_319" data-name="Rectangle 319" class="cls-2" transform="translate(5481 1299)">
+      <rect class="cls-6" width="593" height="396" rx="17"/>
+      <rect class="cls-7" x="5" y="5" width="583" height="386" rx="12"/>
     </g>
-    <g id="Rectangle_301" data-name="Rectangle 301" class="cls-2" transform="translate(4763 2871)">
-      <rect class="cls-7" width="221" height="37" rx="15"/>
-      <rect class="cls-8" x="5" y="5" width="211" height="27" rx="10"/>
+    <path id="Path_71" data-name="Path 71" class="cls-3" d="M20.712,109.855s22.9,1.09,26.768-17.171c4.422-14.672-2.473-26.556-4.838-39.966C37.512,23.63,66.887,32.888,66.887,32.888" transform="translate(5645.436 1370.148)"/>
+    <path id="Path_72" data-name="Path 72" class="cls-3" d="M66.882,109.855s-22.894,1.09-26.766-17.171C35.7,78.013,42.59,66.129,44.955,52.719c5.13-29.088-24.242-19.831-24.242-19.831" transform="translate(5732.861 1589.504) rotate(180)"/>
+    <path id="Path_73" data-name="Path 73" class="cls-3" d="M66.882,109.855s-22.894,1.09-26.766-17.171C35.7,78.013,42.59,66.129,44.955,52.719c5.13-29.088-24.242-19.831-24.242-19.831" transform="translate(5822.98 1370.148)"/>
+    <path id="Path_74" data-name="Path 74" class="cls-3" d="M46.17.012S23.276-1.077,19.4,17.183c-4.421,14.672,2.473,26.556,4.838,39.966C29.372,86.238,0,76.98,0,76.98" transform="translate(5843.867 1479.636)"/>
+    <path id="Path_75" data-name="Path 75" class="cls-2" d="M0,0H593" transform="translate(5481.5 1640.5)"/>
+    <g id="Rectangle_320" data-name="Rectangle 320" class="cls-2" transform="translate(5667 1735)">
+      <rect class="cls-6" width="221" height="37" rx="15"/>
+      <rect class="cls-7" x="5" y="5" width="211" height="27" rx="10"/>
     </g>
-    <path id="Path_51" data-name="Path 51" class="cls-3" d="M34.191,46.451,21.18,34.306s-7.341-7.416-10.462-14.97S6.693,0,6.693,0" transform="translate(4923.436 2830.559)"/>
-    <g id="Group_56" data-name="Group 56" transform="translate(4033 1347.87)">
-      <g id="Rectangle_302" data-name="Rectangle 302" class="cls-4" transform="translate(1055 1317)">
-        <rect class="cls-7" width="138.422" height="243.13" rx="17"/>
-        <rect class="cls-8" x="5" y="5" width="128.422" height="233.13" rx="12"/>
+    <path id="Path_76" data-name="Path 76" class="cls-3" d="M34.191,46.451,21.18,34.306s-7.341-7.416-10.462-14.97S6.693,0,6.693,0" transform="translate(5827.436 1694.559)"/>
+    <g id="Group_57" data-name="Group 57" transform="translate(4937 211.87)">
+      <g id="Rectangle_321" data-name="Rectangle 321" class="cls-4" transform="translate(1055 1317)">
+        <rect class="cls-6" width="138.422" height="243.13" rx="17"/>
+        <rect class="cls-7" x="5" y="5" width="128.422" height="233.13" rx="12"/>
       </g>
     </g>
-    <circle id="Ellipse_16" data-name="Ellipse 16" class="cls-5" cx="10" cy="10" r="10" transform="translate(5147 2867)"/>
-    <rect id="Rectangle_303" data-name="Rectangle 303" class="cls-5" width="10" height="50" rx="5" transform="translate(5182.222 2689.471) rotate(90)"/>
-    <text id="_" data-name="{   }" class="cls-6" transform="translate(4737 2667)"><tspan x="0" y="0" xml:space="preserve">{   }</tspan></text>
-    <path id="Path_50" data-name="Path 50" class="cls-3" d="M6.693,46.451l14.83-12.146s8.367-7.416,11.925-14.97S38.035,0,38.035,0" transform="translate(4783.709 2830.559)"/>
-    <circle id="Ellipse_15" data-name="Ellipse 15" class="cls-5" cx="10" cy="10" r="10" transform="translate(4864 2791)"/>
+    <circle id="Ellipse_30" data-name="Ellipse 30" class="cls-5" cx="10" cy="10" r="10" transform="translate(6051 1731)"/>
+    <rect id="Rectangle_322" data-name="Rectangle 322" class="cls-5" width="10" height="50" rx="5" transform="translate(6086.222 1553.471) rotate(90)"/>
+    <path id="Path_77" data-name="Path 77" class="cls-3" d="M6.693,46.451l14.83-12.146s8.367-7.416,11.925-14.97S38.035,0,38.035,0" transform="translate(5687.709 1694.559)"/>
+    <circle id="Ellipse_31" data-name="Ellipse 31" class="cls-5" cx="10" cy="10" r="10" transform="translate(5768 1655)"/>
   </g>
 </svg>
