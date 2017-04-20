@@ -81,6 +81,7 @@ Flexbox Grid
 .column.column-xs-6 { flex-basis: 100%; }
 
 @media (min-width: 550px) {
+  .row { flex-wrap: nowrap; }
   .column.column-xs-3  { flex-basis: 25%; }
   .column.column-xs-4  { flex-basis: 33.333333%; }
   .column.column-xs-6  { flex-basis: 50%; }
@@ -259,6 +260,12 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.details {
+  .row {
+    align-items: flex-start;
+  }
 }
 
 .detail {
