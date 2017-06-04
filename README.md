@@ -6,7 +6,6 @@ Basic website about me hosted [here](https://emroussel.xyz). Based on [Google's 
 
 Requires [Node](https://nodejs.org/en/) and [Sass](http://sass-lang.com/).
 
-- Install gulp with `npm install -g gulp`
 - Clone this repo
 - Install dependencies with `npm install`
 
