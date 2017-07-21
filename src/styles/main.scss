@@ -147,7 +147,13 @@ section {
 }
 
 section:not(.intro) {
-  padding-top: 50px;
+  padding-top: 75px;
+}
+
+@media (min-width: 550px) {
+  section:not(.intro) {
+    padding-top: 100px;
+  }
 }
 
 .intro {
@@ -223,6 +229,8 @@ header {
 
 @media (min-width: 550px) {
   .skill-section {
+    padding-bottom: 150px;
+
     img {
       max-height: 90px;
     }
