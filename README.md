@@ -1,13 +1,11 @@
 # emroussel.xyz
 
-Basic website about me hosted [here](https://emroussel.xyz). Based on [Google's Web Starter Kit](https://developers.google.com/web/tools/starter-kit/).
+Basic website about me. See the live version at [emroussel.xyz](https://emroussel.xyz). Based on [Google's Web Starter Kit](https://developers.google.com/web/tools/starter-kit/).
 
 ## Getting Started
 
-Requires [Node](https://nodejs.org/en/) and [Sass](http://sass-lang.com/).
-
 - Clone this repo
-- Install dependencies with `npm install`
+- Install dependencies with `yarn` or `npm install`
 
 ## Commands
 
@@ -27,10 +25,4 @@ $ gulp
 
 ```sh
 $ gulp serve:dist
-```
-
-#### Performance Insights
-
-```sh
-$ gulp pagespeed
 ```
