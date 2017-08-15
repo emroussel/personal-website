@@ -221,6 +221,10 @@ header {
     margin-bottom: 50px;
   }
 
+  h3 {
+    margin-bottom: 0.5em;
+  }
+
   .project {
     margin-bottom: 50px;
   }
@@ -294,20 +298,37 @@ header {
 .contact {
   padding-bottom: 50px;
 
-  .logos {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
+  .logo {
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 40px;
 
-    a {
-      opacity: 0.6;
-      width: 40px;
-      margin-left: 1em;
-      margin-right: 1em;
-    }
-
-    a:hover {
-      opacity: 0.8;
+    svg {
+      fill: $gray;
     }
   }
+}
+
+.projects {
+  .logo {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    width: 15%;
+    max-width: 40px;
+
+    svg {
+      fill: #ffffff;
+    }
+  }
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.logos {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
