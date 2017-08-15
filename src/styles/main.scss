@@ -80,7 +80,7 @@ Flexbox Grid
 .column.column-xs-4,
 .column.column-xs-6 { flex-basis: 100%; }
 
-@media (min-width: 550px) {
+@media (min-width: 750px) {
   .row { flex-wrap: nowrap; }
   .column.column-xs-3  { flex-basis: 25%; }
   .column.column-xs-4  { flex-basis: 33.333333%; }
@@ -150,7 +150,7 @@ section:not(.intro) {
   padding-top: 75px;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 750px) {
   section:not(.intro) {
     padding-top: 100px;
   }
@@ -174,7 +174,7 @@ header {
   }
 }
 
-@media (min-width: 550px) {
+@media (min-width: 750px) {
   header {
     justify-content: flex-start;
     padding-top: 2%;
@@ -221,34 +221,44 @@ header {
     margin-bottom: 50px;
   }
 
-  img {
+  .project {
+    margin-bottom: 50px;
+  }
+
+  .icon {
     max-height: 150px;
     margin-bottom: 50px;
   }
-}
 
-@media (min-width: 550px) {
-  .skill-section {
-    padding-bottom: 150px;
-
-    img {
-      max-height: 90px;
-    }
+  .screenshot {
+    max-width: 100%;
   }
 }
 
 @media (min-width: 750px) {
   .skill-section {
-    img {
+    .icon {
       max-height: 200px;
     }
   }
 }
 
-@media (min-width: 550px) {
+@media (min-width: 1000px) {
+  .skill-section {
+    .icon {
+      max-height: 200px;
+    }
+  }
+}
+
+@media (min-width: 750px) {
   .column-right {
     order: 2;
   }
+}
+
+.projects {
+  align-items: flex-start;
 }
 
 .skill-text {
@@ -268,6 +278,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .details {
