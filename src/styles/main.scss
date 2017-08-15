@@ -229,6 +229,9 @@ header {
     margin-bottom: 50px;
   }
 
+  // Use height instead of with to size the icons because their height is
+  // similar, but not their width. Using width would make the width of the lines
+  // different between the two and make them seem disproportionate.
   .icon {
     max-height: 150px;
     margin-bottom: 50px;
