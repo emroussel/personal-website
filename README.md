@@ -1,28 +1,24 @@
 # emroussel.xyz
 
-Basic website about me. See the live version at [emroussel.xyz](https://emroussel.xyz). Based on [Google's Web Starter Kit](https://developers.google.com/web/tools/starter-kit/).
+Basic website about me. See the live version at [emroussel.xyz](https://emroussel.xyz).
 
-## Getting Started
-
-- Clone this repo
-- Install dependencies with `yarn` or `npm install`
+Bundled with [Parcel](https://parceljs.org/).
 
 ## Commands
 
-#### Watch For Changes & Automatically Refresh Across Devices
-
+Start a development server with hot reloading
 ```sh
-$ gulp serve
+npm start
 ```
 
-#### Build & Optimize
+Build the minified and optimized version to `dist/`
 
 ```sh
-$ gulp
+npm run build
 ```
 
-#### Serve the Fully Built & Optimized Site
+Linting (for html and scss)
 
 ```sh
-$ gulp serve:dist
+npm run lint
 ```
