@@ -1,0 +1,11 @@
+<svg width="91px" height="39px" viewBox="0 0 91 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-2.000000, -9.000000)" fill="#262626">
+            <text font-family="Rubik-Medium, Rubik" font-size="50.5263158" font-weight="400" letter-spacing="-0.947368383">
+                <tspan x="0" y="47">em</tspan>
+                <tspan x="72.9347369" y="47">r</tspan>
+            </text>
+            <rect x="31.5" y="9.75" width="39.75" height="6" rx="1.05263158"></rect>
+        </g>
+    </g>
+</svg>

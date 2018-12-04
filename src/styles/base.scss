@@ -1,0 +1,191 @@
+@import "variables";
+
+/*
+Base styles
+*/
+html,
+body {
+  font-family: $font-text;
+  font-size: 62.5%;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: #ffffff;
+  color: map-get($colors, "dark-gray");
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+// Remove the gray background on active links in IE 10
+a {
+  background-color: transparent;
+}
+
+// Because IE doesn"t support main
+main {
+  display: block;
+}
+
+img {
+  // Makes chrome render clear downscaled images
+  image-rendering: -webkit-optimize-contrast;
+  // Remove the border on images inside links in IE 10
+  border-style: none;
+}
+
+/*
+Typography
+*/
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-title;
+  font-weight: 700;
+}
+
+h1,
+.title1 {
+  font-size: 3.3rem;
+}
+
+h2,
+.title2 {
+  font-size: 2.7rem;
+}
+
+h3,
+.title3 {
+  font-size: 2.4rem;
+}
+
+h4,
+.title4 {
+  font-size: 1.8rem;
+}
+
+@media (min-width: map-get($breakpoints, "mobile")) {
+  h1,
+  .title1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: map-get($breakpoints, "tablet")) {
+  h1,
+  .title1 {
+    font-size: 6.9rem;
+  }
+
+  h2,
+  .title2 {
+    font-size: 3.9rem;
+  }
+
+  h3,
+  .title3 {
+    font-size: 3rem;
+  }
+
+  h4,
+  .title4 {
+    font-size: 2.4rem;
+  }
+}
+
+p,
+a {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-top: 18px;
+  font-family: $font-text;
+}
+
+@media (min-width: map-get($breakpoints, "tablet")) {
+  p,
+  a {
+    font-size: 1.8rem;
+  }
+}
+
+a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  color: map-get($colors, "medium-gray");
+}
+
+/*
+Utilities classes
+*/
+.text-center {
+  text-align: center;
+}
+
+.text-color-dark-gray {
+  color: map-get($colors, "dark-gray");
+}
+
+.text-color-white {
+  color: #ffffff;
+}
+
+.background-primary {
+  background-color: map-get($colors, "primary");
+  color: #ffffff;
+}
+
+.background-secondary {
+  background-color: map-get($colors, "secondary");
+  color: #ffffff;
+}
+
+.background-white {
+  background-color: #ffffff;
+  color: map-get($colors, "dark-gray");
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $container-width;
+  width: 100%;
+}
+
+.container {
+  padding-left: map-get($side-margins, "small");
+  padding-right: map-get($side-margins, "small");
+}
+
+@media (min-width: map-get($breakpoints, "tablet")) {
+  .container {
+    padding-left: map-get($side-margins, "large");
+    padding-right: map-get($side-margins, "large");
+  }
+}
