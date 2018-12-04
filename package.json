@@ -1,13 +1,13 @@
 {
   "name": "emroussel.xyz",
-  "private": "true",
+  "private": true,
   "version": "1.0.0",
   "description": "My website",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "lint": "npm-run-all -p lint:*",
-    "lint:html": "htmlhint src/**/*.html",
+    "lint:html": "htmlhint --config .htmlhintrc src/**/*.html",
     "lint:scss": "stylelint src/**/*.scss",
     "fix": "npm-run-all -p fix:*",
     "fix:scss": "stylelint src/**/*.scss --fix"
