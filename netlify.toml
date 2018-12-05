@@ -10,3 +10,8 @@
     X-Content-Type-Options = "nosniff"
     Content-Security-Policy = "default-src 'none'; font-src https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self'"
     Referrer-Policy = "no-referrer-when-downgrade"
+
+[[redirects]]
+  from = "https://naughty-panini-445626.netlify.com/*"
+  to = "https://emroussel.xyz/:splat"
+  force = true
