@@ -1,12 +1,5 @@
 @import "variables";
 
-$container-width-plus-margin-breakpoint: $container-width +
-  (map-get($side-margins, "large") * 2);
-$extra-large-margin: ((100vw - #{$container-width}) / 2) + #{map-get(
-    $side-margins,
-    "large"
-  )};
-
 .header {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -135,11 +128,11 @@ $extra-large-margin: ((100vw - #{$container-width}) / 2) + #{map-get(
 
 @media (min-width: $container-width-plus-margin-breakpoint) {
   .rectangle-right {
-    margin-right: calc($extra-large-margin);
+    margin-right: $extra-large-margin;
   }
 
   .rectangle-left {
-    margin-left: calc($extra-large-margin);
+    margin-left: $extra-large-margin;
   }
 }
 
@@ -290,11 +283,11 @@ $extra-large-margin: ((100vw - #{$container-width}) / 2) + #{map-get(
 
 @media (min-width: $container-width-plus-margin-breakpoint) {
   .project-visual-right {
-    margin-right: calc($extra-large-margin);
+    margin-right: $extra-large-margin;
   }
 
   .project-visual-left {
-    margin-left: calc($extra-large-margin);
+    margin-left: $extra-large-margin;
   }
 }
 
@@ -332,11 +325,11 @@ $extra-large-margin: ((100vw - #{$container-width}) / 2) + #{map-get(
 @media (min-width: $container-width-plus-margin-breakpoint) {
   .project-content-right {
     padding-right: 60px;
-    margin-right: calc($extra-large-margin);
+    margin-right: $extra-large-margin;
   }
 
   .project-content-left {
-    margin-left: calc($extra-large-margin);
+    margin-left: $extra-large-margin;
   }
 }
 

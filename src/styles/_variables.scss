@@ -22,3 +22,9 @@ $small-container-width: 720px;
 
 $font-title: "Helvetica Neue", "Helvetica", Arial, sans-serif;
 $font-text: "Source Sans Pro", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+
+$container-width-plus-margin-breakpoint: $container-width +
+  (map-get($side-margins, "large") * 2);
+$extra-large-margin: calc(
+  ((100vw - #{$container-width}) / 2) + #{map-get($side-margins, "large")}
+);
