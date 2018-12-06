@@ -5,7 +5,7 @@ Base styles
 */
 html,
 body {
-  font-family: $font-text;
+  font-family: $font;
   font-size: 62.5%;
   -moz-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -63,7 +63,6 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: $font-title;
   font-weight: 700;
 }
 
@@ -121,13 +120,12 @@ a {
   font-size: 1.6rem;
   line-height: 1.5;
   margin-top: 18px;
-  font-family: $font-text;
 }
 
 @media (min-width: map-get($breakpoints, "tablet")) {
   p,
   a {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 

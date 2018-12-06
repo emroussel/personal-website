@@ -20,8 +20,7 @@ $breakpoints: (
 $container-width: 1300px;
 $small-container-width: 720px;
 
-$font-title: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-$font-text: "Source Sans Pro", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$font: "Helvetica Neue", "Helvetica", Arial, sans-serif;
 
 $container-width-plus-margin-breakpoint: $container-width +
   (map-get($side-margins, "large") * 2);
