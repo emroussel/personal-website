@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html && npm run build:moveFiles",
-    "build:moveFiles": "cp src/favicon.ico dist/ && mkdir dist/scripts && cp src/scripts/google-analytics.js dist/scripts",
+    "build:moveFiles": "cp src/favicon.ico dist/ && mkdir -p dist/scripts && cp src/scripts/google-analytics.js dist/scripts && cp src/resume.pdf dist/resume.pdf",
     "lint": "npm-run-all -p lint:*",
     "lint:html": "htmlhint --config .htmlhintrc src/**/*.html",
     "lint:scss": "stylelint src/**/*.scss",
