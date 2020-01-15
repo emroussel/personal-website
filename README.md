@@ -7,6 +7,7 @@ Bundled with [Parcel](https://parceljs.org/).
 ## Commands
 
 Start a development server with hot reloading
+
 ```sh
 npm start
 ```

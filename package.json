@@ -27,6 +27,10 @@
     "*.html": [
       "npm run lint:html",
       "git add"
+    ],
+    "*.md": [
+      "prettier --write *.md",
+      "git add"
     ]
   },
   "repository": {
