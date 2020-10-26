@@ -1,25 +1,9 @@
-# emroussel.xyz
+# Personal website
 
 Basic website about me. See the live version at [emroussel.xyz](https://emroussel.xyz).
 
-Bundled with [Parcel](https://parceljs.org/).
+Built with [Next.js](https://nextjs.org/), bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), and uses [TailwindCSS](https://tailwindcss.com/). Deployed on [Vercel](https://vercel.com/).
 
-## Commands
+## Getting Started
 
-Start a development server with hot reloading
-
-```sh
-npm start
-```
-
-Build the minified and optimized version to `dist/`
-
-```sh
-npm run build
-```
-
-Linting (for html and scss)
-
-```sh
-npm run lint
-```
+- To run locally, run the development server (`npm run dev`) and open [http://localhost:3000](http://localhost:3000) with your browser.

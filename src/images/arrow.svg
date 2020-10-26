@@ -1,9 +1,0 @@
-<svg class="arrow" width="9px" height="8px" viewBox="0 0 9 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g class="arrow-fill" transform="translate(0.000000, -1.000000)" fill="#002F60" fill-rule="nonzero">
-            <rect transform="translate(6.528427, 3.528427) rotate(45.000000) translate(-6.528427, -3.528427) " x="3.52842712" y="2.52842712" width="6" height="2" rx="1"></rect>
-            <rect transform="translate(6.528427, 6.428427) rotate(135.000000) translate(-6.528427, -6.428427) " x="3.52842712" y="5.42842712" width="6" height="2" rx="1"></rect>
-            <rect x="0" y="4" width="9" height="2" rx="1"></rect>
-        </g>
-    </g>
-</svg>

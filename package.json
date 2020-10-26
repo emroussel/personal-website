@@ -1,60 +1,61 @@
 {
-  "name": "emroussel.xyz",
+  "name": "personal-website",
+  "version": "0.1.0",
   "private": true,
-  "version": "1.0.0",
-  "description": "My website",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html && npm run build:moveFiles",
-    "build:moveFiles": "cp src/favicon.ico dist/ && mkdir -p dist/scripts && cp src/scripts/google-analytics.js dist/scripts && cp src/resume.pdf dist/resume.pdf",
-    "lint": "npm-run-all -p lint:*",
-    "lint:html": "htmlhint --config .htmlhintrc src/**/*.html",
-    "lint:scss": "stylelint src/**/*.scss",
-    "fix": "npm-run-all -p fix:*",
-    "fix:scss": "stylelint src/**/*.scss --fix"
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "eslint --ext .js ./",
+    "fix": "npm run lint -- --fix",
+    "start": "next start"
+  },
+  "eslintConfig": {
+    "parser": "@babel/eslint-parser",
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended",
+      "prettier/react"
+    ],
+    "plugins": [
+      "react",
+      "prettier"
+    ],
+    "rules": {
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off"
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run lint"
+      "pre-commit": "npm run fix"
     }
   },
-  "lint-staged": {
-    "*.scss": [
-      "npm run fix:scss",
-      "git add"
-    ],
-    "*.html": [
-      "npm run lint:html",
-      "git add"
-    ],
-    "*.md": [
-      "prettier --write *.md",
-      "git add"
-    ]
+  "dependencies": {
+    "next": "9.5.5",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "tailwindcss": "1.9.5"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/emroussel/emroussel.xyz.git"
-  },
-  "author": "Emmanuel Roussel <emmanuel@emroussel.xyz>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/emroussel/emroussel.xyz/issues"
-  },
-  "homepage": "https://github.com/emroussel/emroussel.xyz#readme",
   "devDependencies": {
-    "autoprefixer": "9.7.3",
-    "htmlhint": "0.11.0",
-    "husky": "3.1.0",
-    "lint-staged": "9.5.0",
-    "npm-run-all": "4.1.5",
-    "parcel-bundler": "1.12.3",
-    "prettier": "1.19.1",
-    "sass": "1.24.4",
-    "stylelint": "12.0.1",
-    "stylelint-config-prettier": "8.0.1",
-    "stylelint-prettier": "1.1.2"
-  },
-  "dependencies": {}
+    "@babel/core": "7.12.3",
+    "@babel/eslint-parser": "7.12.1",
+    "eslint": "7.12.0",
+    "eslint-config-prettier": "6.14.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-react": "7.21.5",
+    "husky": "4.3.0",
+    "postcss-flexbugs-fixes": "4.2.1",
+    "postcss-preset-env": "6.7.0",
+    "prettier": "2.1.2"
+  }
 }

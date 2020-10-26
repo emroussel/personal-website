@@ -1,0 +1,26 @@
+.project-rectangle {
+  z-index: -1;
+}
+
+.project-image {
+  height: 18rem;
+}
+
+@screen sm {
+  .project-image {
+    height: 20rem;
+  }
+}
+
+.toast {
+  bottom: -6rem;
+}
+
+.toast-visible {
+  bottom: 0;
+}
+
+.footer-link {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
