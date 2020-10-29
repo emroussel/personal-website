@@ -1,14 +1,57 @@
+.hero-image-container > div {
+  @apply w-48 !important;
+}
+
+.hero-image {
+  @apply w-48 !important;
+  @apply h-48 !important;
+}
+
+@screen sm {
+  .hero-image-container > div {
+    @apply w-40 !important;
+  }
+
+  .hero-image {
+    @apply w-40 !important;
+    @apply h-40 !important;
+  }
+}
+
+@screen md {
+  .hero-image-container > div {
+    @apply w-48 !important;
+  }
+
+  .hero-image {
+    @apply w-48 !important;
+    @apply h-48 !important;
+  }
+}
+
+@screen lg {
+  .hero-image-container > div {
+    @apply w-56 !important;
+  }
+
+  .hero-image {
+    @apply w-56 !important;
+    @apply h-56 !important;
+  }
+}
+
 .project-rectangle {
   z-index: -1;
 }
 
 .project-image {
-  height: 18rem;
+  width: 100%;
+  max-width: 25rem;
 }
 
-@screen sm {
+@screen md {
   .project-image {
-    height: 20rem;
+    max-width: 27rem;
   }
 }
 

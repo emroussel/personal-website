@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import { Nav } from "../components/Nav";
@@ -7,15 +8,19 @@ function Project({ title, subtitle, illustrationUrl, illustrationAlt, text, link
   return (
     <div className="flex md:flex-row flex-col justify-between items-center mt-16">
       <div
-        className={`relative py-2 sm:py-8 md:w-1/2 w-full ${
+        className={`relative py-4 sm:py-8 md:w-1/2 w-full ${
           isRight ? "order-none md:order-1 flex justify-end" : "order-none"
         }`}
       >
-        <img
-          src={illustrationUrl}
-          alt={illustrationAlt || ""}
-          className={`${isRight ? "lg:mr-8 -mr-4" : "lg:ml-8 -ml-4"} ${styles["project-image"]}`}
-        />
+        <div className={`${isRight ? "lg:mr-8 -mr-4" : "lg:ml-8 -ml-4"} w-full`}>
+          <Image
+            src={illustrationUrl}
+            alt={illustrationAlt || ""}
+            unsized
+            loading="eager"
+            className={`${isRight ? "ml-auto" : ""} ${styles["project-image"]}`}
+          />
+        </div>
         <div
           className={`${
             isRight ? "bg-secondary rounded-l-lg lg:rounded-r-lg" : "bg-primary rounded-r-lg lg:rounded-l-lg"
@@ -24,7 +29,7 @@ function Project({ title, subtitle, illustrationUrl, illustrationAlt, text, link
           } ${styles["project-rectangle"]}`}
         />
       </div>
-      <div className={`${isRight ? "md:mr-8" : "md:ml-8"} md:w-1/2 w-full pt-8 md:py-12 py-0`}>
+      <div className={`${isRight ? "md:mr-8 lg:mr-16" : "md:ml-8 lg:ml-16"} md:w-1/2 w-full pt-8 md:py-12 py-0`}>
         <h2>{title}</h2>
         <p className="font-semibold py-2">{subtitle}</p>
         <p>{text}</p>
@@ -52,12 +57,18 @@ export default function Home() {
         <Nav />
         <main className="sm:pb-16 pb-8">
           <section className="sm:flex items-center sm:mt-20 md:mt-24 mt-8">
-            <img
-              src="/profile.png"
-              className="sm:h-40 md:h-48 lg:h-56 h-48 flex-shrink-0 mx-auto sm:mx-0 mb-8 sm:mb-0"
-              alt=""
-            />
-            <div className="sm:ml-8 md:ml-12 lg:ml-12 ml-0">
+            <div className={`flex justify-center sm:mx-0 mb-8 sm:mb-0 ${styles["hero-image-container"]}`}>
+              <Image
+                src="/profile.jpg"
+                width={224}
+                height={224}
+                className={styles["hero-image"]}
+                alt="Emmanuel Roussel"
+                loading="eager"
+                priority
+              />
+            </div>
+            <div className="sm:ml-8 md:ml-10 lg:ml-12 ml-0">
               <h1>
                 Bridge between
                 <br />
