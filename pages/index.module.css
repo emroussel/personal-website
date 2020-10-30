@@ -47,6 +47,7 @@
 .project-image {
   width: 100%;
   max-width: 25rem;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.15);
 }
 
 @screen md {
