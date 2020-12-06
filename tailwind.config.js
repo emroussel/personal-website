@@ -1,46 +1,43 @@
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
   purge: ["./pages/**/*.js", "./components/**/*.js"],
+  darkMode: false,
   theme: {
-    extend: {
-      colors: {
-        transparent: "transparent",
-        current: "currentColor",
-        white: "#ffffff",
-        primary: {
-          light: "#004893",
-          default: "#002F60",
-        },
-        secondary: {
-          default: "#009244",
-        },
-        gray: {
-          default: "#202020",
-        },
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      white: "#ffffff",
+      primary: {
+        light: "#004893",
+        DEFAULT: "#002F60",
       },
-      fontFamily: {
-        sans: [
-          "Inter",
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          '"Segoe UI"',
-          "Roboto",
-          '"Helvetica Neue"',
-          "Arial",
-          '"Noto Sans"',
-          "sans-serif",
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
-        ],
+      secondary: {
+        DEFAULT: "#009244",
+      },
+      gray: {
+        DEFAULT: "#202020",
       },
     },
+    fontFamily: {
+      sans: [
+        "Inter",
+        "system-ui",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        '"Segoe UI"',
+        "Roboto",
+        '"Helvetica Neue"',
+        "Arial",
+        '"Noto Sans"',
+        "sans-serif",
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+        '"Noto Color Emoji"',
+      ],
+    },
   },
-  variants: {},
+  variants: {
+    extend: {},
+  },
   plugins: [],
 };

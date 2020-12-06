@@ -72,7 +72,7 @@ export default function Home() {
                 <br />
                 and design
               </h1>
-              <div className="bg-secondary h-2 md:w-48 w-32 rounded-sm md:mt-6 lg:mt-8 mt-4" />
+              <div className="bg-secondary h-2 md:w-48 lg:w-56 w-32 rounded-sm md:mt-4 lg:mt-6 mt-3" />
             </div>
           </section>
           <section className="max-w-screen-sm mx-auto sm:mt-32 md:mt-40 mt-16">
@@ -146,7 +146,7 @@ export default function Home() {
                   {isClipboardSupported ? (
                     <>
                       <button
-                        className={`inline-block font-bold text-xl flex items-center ${styles["footer-link"]}`}
+                        className={`font-bold text-xl flex items-center ${styles["footer-link"]}`}
                         onClick={() => {
                           navigator.clipboard.writeText("emmanuel@emroussel.com");
                           setIsToastVisible(true);
