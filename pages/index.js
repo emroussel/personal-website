@@ -7,14 +7,21 @@ import { Head } from "../components/Head";
 function Project({ title, subtitle, illustrationUrl, illustrationAlt, text, linkUrl, linkText, isRight }) {
   return (
     <div className="flex md:flex-row flex-col justify-between items-center mt-16">
-      <div className={`relative py-8 w-full ${isRight ? "order-none md:order-1 flex justify-end" : "order-none"}`}>
-        <div className={`${isRight ? "pl-8 sm:pl-0 lg:mr-8" : "pr-8 sm:pr-0 lg:ml-8"} w-full`}>
+      <div
+        className={`relative py-8 w-full ${
+          isRight ? "order-none md:order-1 flex justify-end pl-8 sm:pl-0" : "order-none pr-8 sm:pr-0"
+        }`}
+      >
+        <div
+          className={`${isRight ? "lg:mr-8" : "lg:ml-8"} w-full rounded-lg overflow-hidden ${styles["project-image"]}`}
+        >
           <Image
             src={illustrationUrl}
             alt={illustrationAlt || ""}
-            unsized
+            layout="responsive"
             loading="eager"
-            className={`${isRight ? "ml-auto" : ""} rounded-lg ${styles["project-image"]}`}
+            width={540}
+            height={401}
           />
         </div>
         <div

@@ -12,7 +12,7 @@ export default function Custom404() {
         <div className="flex flex-1 items-center justify-center">
           <div className="mb-32">
             <h1 className="sm:text-6xl text-4xl">Page not found</h1>
-            <div className="bg-secondary h-2 w-2/5 rounded-sm mt-4" />
+            <div className="bg-secondary h-2 w-2/5 rounded-sm sm:mt-6 mt-3" />
           </div>
         </div>
       </div>
