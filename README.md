@@ -1,6 +1,6 @@
 # Personal website
 
-Basic website about me. See the live version at [emroussel.xyz](https://emroussel.xyz).
+Basic website about me. See the live version at [emroussel.com](https://emroussel.com).
 
 Built with [Next.js](https://nextjs.org/), bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), and uses [TailwindCSS](https://tailwindcss.com/). Deployed on [Vercel](https://vercel.com/).
 
