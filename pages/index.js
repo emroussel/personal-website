@@ -60,18 +60,10 @@ export default function Home() {
         <Nav />
         <main className="sm:pb-16 pb-8">
           <section className="sm:flex items-center sm:mt-20 md:mt-24 mt-8">
-            <div className={`flex justify-center sm:mx-0 mb-8 sm:mb-0 ${styles["hero-image-container"]}`}>
-              <Image
-                src="/profile.jpg"
-                width={224}
-                height={224}
-                className={styles["hero-image"]}
-                alt="Emmanuel Roussel"
-                loading="eager"
-                priority
-              />
+            <div className={`sm:flex-1 mb-8 sm:mb-0 mx-auto sm:mr-auto sm:ml-0 px-8 sm:px-0 ${styles["hero-image"]}`}>
+              <Image src="/profile.jpg" alt="Emmanuel Roussel" layout="responsive" width={280} height={280} priority />
             </div>
-            <div className="sm:ml-8 md:ml-10 lg:ml-12 ml-0">
+            <div className="sm:ml-8 md:ml-10 lg:ml-12 ml-0 mr-auto">
               <h1>
                 Bridge between
                 <br />

@@ -1,42 +1,23 @@
-.hero-image-container > div {
-  @apply w-48 !important;
-}
-
 .hero-image {
-  @apply w-48 !important;
-  @apply h-48 !important;
+  max-width: 22rem;
 }
 
 @screen sm {
-  .hero-image-container > div {
-    @apply w-40 !important;
-  }
-
   .hero-image {
-    @apply w-40 !important;
-    @apply h-40 !important;
+    max-width: 14rem;
+    min-width: 10rem;
   }
 }
 
 @screen md {
-  .hero-image-container > div {
-    @apply w-48 !important;
-  }
-
   .hero-image {
-    @apply w-48 !important;
-    @apply h-48 !important;
+    max-width: 16rem;
   }
 }
 
 @screen lg {
-  .hero-image-container > div {
-    @apply w-56 !important;
-  }
-
   .hero-image {
-    @apply w-56 !important;
-    @apply h-56 !important;
+    max-width: 18rem;
   }
 }
 
