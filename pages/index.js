@@ -86,16 +86,16 @@ export default function Home() {
               medical records.
             </p>
             <p className="mt-4">
-              Some software engineers like being told what to work on. I&apos;m the opposite: I want to have a deep
-              understanding of the problem space, empathize with users directly, collaborate on solutions, and
-              contribute to designs. Because of this, I&apos;m at my best when working in small independent and
-              collaborative teams solving tangible problems, usually at smaller organizations where I can have a
-              substantial impact.
+              I have a strong attention to detail, a product mindset, and a design sense. Through leading teams,
+              architecting complex applications, internationalizing codebases, and mentoring developers over the last
+              couple of years, I&apos;ve became an expert in JavaScript and React.
             </p>
             <p className="mt-4">
-              Through leading teams, architecting complex applications, internationalizing codebases, and mentoring
-              developers over the last couple of years, I&apos;ve became an expert in JavaScript and React. I have a
-              strong attention to detail, a product mindset, and a design sense.
+              Along writing high quality code and building efficient web applications, I&apos;m comfortable jumping
+              between empathizing with users, collaborating on solutions, contributing to designs, and answering
+              customer support requests. Because of this, I&apos;m at my best when working in small independent and
+              collaborative teams solving tangible problems, usually at smaller organizations where I can have a
+              substantial impact.
             </p>
           </section>
           <section className="sm:mt-32 mt-16">
