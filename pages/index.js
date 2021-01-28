@@ -88,7 +88,7 @@ export default function Home() {
             <p className="mt-4">
               I have a strong attention to detail, a product mindset, and a design sense. Through leading teams,
               architecting complex applications, internationalizing codebases, and mentoring developers over the last
-              couple of years, I&apos;ve became an expert in JavaScript and React.
+              couple of years, I&apos;ve become an expert in JavaScript and React.
             </p>
             <p className="mt-4">
               Along writing high quality code and building efficient web applications, I&apos;m comfortable jumping
