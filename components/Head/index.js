@@ -1,12 +1,12 @@
 import NextHead from "next/head";
 import { useRouter } from "next/router";
 
-const title = "Emmanuel Roussel";
+const defaultTitle = "Emmanuel Roussel";
 const description =
   "I’m a Canadian software engineer with a passion for building digital products that positively impact communities.";
 const baseUrl = "https://emroussel.com";
 
-export function Head({ children }) {
+export function Head({ children, title = defaultTitle }) {
   const router = useRouter();
   const url = `${baseUrl}${router.pathname === "/" ? "" : router.pathname}`;
 

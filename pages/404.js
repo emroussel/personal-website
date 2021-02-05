@@ -4,7 +4,7 @@ import { Head } from "../components/Head";
 export default function Custom404() {
   return (
     <>
-      <Head>
+      <Head title="Page Not Found | Emmanuel Roussel">
         <meta name="robots" content="noindex,follow" />
       </Head>
       <div className="flex flex-col h-screen sm:px-8 px-4">
