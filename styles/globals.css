@@ -46,6 +46,6 @@
 
   a:hover,
   button:hover {
-    opacity: 0.8;
+    @apply opacity-80;
   }
 }

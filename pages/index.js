@@ -209,9 +209,9 @@ export default function Home() {
         </main>
       </div>
       <div
-        className={`fixed inset-x-0 sm:mb-8 mb-4 mx-4 sm:mx-8 text-center transition-all duration-200 ease-in-out ${
-          styles.toast
-        } ${isToastVisible ? `${styles["toast-visible"]} visible` : "invisible"}`}
+        className={`fixed inset-x-0 sm:mb-8 mb-4 mx-4 sm:mx-8 text-center transition-all duration-200 ease-in-out -bottom-24 ${
+          isToastVisible ? `${styles["toast-visible"]} visible` : "invisible"
+        }`}
       >
         {isToastTextVisible ? (
           <div
