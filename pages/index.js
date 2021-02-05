@@ -61,7 +61,15 @@ export default function Home() {
         <main className="sm:pb-16 pb-8">
           <section className="sm:flex items-center sm:mt-20 md:mt-24 mt-8">
             <div className={`sm:flex-1 mb-8 sm:mb-0 mx-auto sm:mr-auto sm:ml-0 px-8 sm:px-0 ${styles["hero-image"]}`}>
-              <Image src="/profile.jpg" alt="Emmanuel Roussel" layout="responsive" width={280} height={280} priority />
+              <Image
+                src="/profile.jpg"
+                alt="Emmanuel Roussel"
+                layout="responsive"
+                width={280}
+                height={280}
+                priority
+                loading="eager"
+              />
             </div>
             <div className="sm:ml-8 md:ml-10 lg:ml-12 ml-0 mr-auto">
               <h1>
