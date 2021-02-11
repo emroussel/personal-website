@@ -5,6 +5,8 @@
 @layer base {
   html {
     @apply text-gray;
+    @apply antialiased;
+    @apply tracking-tight;
   }
 
   h1 {
