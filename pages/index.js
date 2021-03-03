@@ -84,9 +84,9 @@ export default function Home() {
           </section>
           <section className="max-w-screen-sm mx-auto sm:mt-32 md:mt-40 mt-16">
             <p className="font-semibold sm:text-xl text-base">
-              👋 Hi, I&apos;m Emmanuel. I&apos;m a Canadian software engineer with a passion for building digital
-              products that positively impact communities and deliver outstanding user experiences. I&apos;m currently
-              the co-founder of{" "}
+              👋 Hi, I&#39;m Emmanuel. I&#39;m a Canadian software engineer with a passion for building digital products
+              that positively impact communities and deliver outstanding user experiences. I&#39;m currently the
+              co-founder of{" "}
               <a href="https://berna.health" target="_blank" rel="noopener noreferrer">
                 Berna
               </a>
@@ -94,16 +94,16 @@ export default function Home() {
               medical records.
             </p>
             <p className="mt-4">
-              I have a strong attention to detail, a product mindset, and a design sense. Through leading teams,
-              architecting complex applications, internationalizing codebases, and mentoring developers over the last
-              couple of years, I&apos;ve become an expert in JavaScript and React.
+              Over the last couple of years, I&#39;ve contributed to many web applications (mostly using JavaScript,
+              React, and GraphQL), but I&#39;ve also led teams, architected new projects, built component libraries,
+              internationalized codebases, and mentored developers. I have a strong attention to detail, a product
+              mindset, and a design sense.
             </p>
             <p className="mt-4">
-              Along writing high quality code and building efficient web applications, I&apos;m comfortable jumping
-              between empathizing with users, collaborating on solutions, contributing to designs, and answering
-              customer support requests. Because of this, I&apos;m at my best when working in small independent and
-              collaborative teams solving tangible problems, usually at smaller organizations where I can have a
-              substantial impact.
+              Along writing code, I&#39;m comfortable jumping between empathizing with users, contributing to designs,
+              and answering customer support requests. Because of this, I&#39;m at my best when working in small
+              independent and collaborative teams solving tangible problems, usually at smaller organizations where I
+              can have a greater impact.
             </p>
           </section>
           <section className="sm:mt-32 mt-16">
