@@ -90,7 +90,7 @@ export default function Home() {
               <a href="https://berna.health" target="_blank" rel="noopener noreferrer">
                 Berna
               </a>
-              , a startup improving the quality and efficiency of health care in Sub-Saharan Africa by digitalizing
+              , a startup improving the quality and efficiency of health care in Sub-Saharan Africa by digitizing
               medical records.
             </p>
             <p className="mt-4">
