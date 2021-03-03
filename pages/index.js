@@ -6,7 +6,7 @@ import { Head } from "../components/Head";
 
 function Project({ title, subtitle, illustrationUrl, illustrationAlt, text, linkUrl, linkText, isRight }) {
   return (
-    <div className="flex md:flex-row flex-col justify-between items-center mt-16">
+    <div className="flex md:flex-row flex-col justify-between items-center mt-32">
       <div
         className={`relative py-8 w-full ${
           isRight ? "order-none md:order-1 flex justify-end pl-8 sm:pl-0" : "order-none pr-8 sm:pr-0"
@@ -32,7 +32,7 @@ function Project({ title, subtitle, illustrationUrl, illustrationAlt, text, link
           } ${styles["project-rectangle"]}`}
         />
       </div>
-      <div className={`${isRight ? "md:mr-10 lg:mr-16" : "md:ml-10 lg:ml-16"} w-full pt-8 md:py-12 py-0`}>
+      <div className={`${isRight ? "md:mr-16 lg:mr-32" : "md:ml-16 lg:ml-32"} w-full pt-8 md:py-12 py-0`}>
         <h2>{title}</h2>
         <p className="font-semibold py-2">{subtitle}</p>
         <p>{text}</p>
