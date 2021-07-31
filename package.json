@@ -14,12 +14,10 @@
     "extends": [
       "eslint:recommended",
       "plugin:react/recommended",
-      "plugin:prettier/recommended",
-      "prettier/react"
+      "plugin:prettier/recommended"
     ],
     "plugins": [
-      "react",
-      "prettier"
+      "react"
     ],
     "rules": {
       "react/prop-types": "off",
@@ -41,21 +39,22 @@
     }
   },
   "dependencies": {
-    "next": "10.0.5",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "tailwindcss": "2.0.2"
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "tailwindcss": "2.2.7"
   },
   "devDependencies": {
-    "@babel/core": "7.12.10",
-    "@babel/eslint-parser": "7.12.1",
-    "autoprefixer": "10.2.3",
-    "eslint": "7.15.0",
-    "eslint-config-prettier": "6.15.0",
-    "eslint-plugin-prettier": "3.2.0",
-    "eslint-plugin-react": "7.21.5",
+    "@babel/core": "7.14.8",
+    "@babel/eslint-parser": "7.14.7",
+    "autoprefixer": "10.3.1",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.0.1",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-react": "7.24.0",
     "husky": "4.3.8",
-    "postcss": "8.2.4",
-    "prettier": "2.2.1"
+    "postcss": "8.3.6",
+    "prettier": "2.3.2"
   }
 }

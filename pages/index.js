@@ -3,8 +3,13 @@ import { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import { Nav } from "../components/Nav";
 import { Head } from "../components/Head";
+import ProfileImage from "../public/profile.jpg";
+import BernaIllustration from "../public/berna-illustration.svg";
+import SixRiverIllustration from "../public/6river-illustration.svg";
+import LolaIllustration from "../public/lola-illustration.svg";
+import AtomizeIllustration from "../public/atomize-illustration.svg";
 
-function Project({ title, subtitle, illustrationUrl, illustrationAlt, text, linkUrl, linkText, isRight }) {
+function Project({ title, subtitle, illustration, illustrationAlt, text, linkUrl, linkText, isRight }) {
   return (
     <div className="flex md:flex-row flex-col justify-between items-center mt-32">
       <div
@@ -15,14 +20,7 @@ function Project({ title, subtitle, illustrationUrl, illustrationAlt, text, link
         <div
           className={`${isRight ? "lg:mr-8" : "lg:ml-8"} w-full rounded-lg overflow-hidden ${styles["project-image"]}`}
         >
-          <Image
-            src={illustrationUrl}
-            alt={illustrationAlt || ""}
-            layout="responsive"
-            loading="eager"
-            width={540}
-            height={401}
-          />
+          <Image src={illustration} alt={illustrationAlt || ""} layout="responsive" />
         </div>
         <div
           className={`${
@@ -62,13 +60,11 @@ export default function Home() {
           <section className="sm:flex items-center sm:mt-20 md:mt-24 mt-8">
             <div className={`sm:flex-1 mb-8 sm:mb-0 mx-auto sm:mr-auto sm:ml-0 px-8 sm:px-0 ${styles["hero-image"]}`}>
               <Image
-                src="/profile.jpg"
-                alt="Emmanuel Roussel"
+                src={ProfileImage}
+                alt="Photo of Emmanuel Roussel"
                 layout="responsive"
-                width={280}
-                height={280}
                 priority
-                loading="eager"
+                placeholder="blur"
               />
             </div>
             <div className="sm:ml-8 md:ml-10 lg:ml-12 ml-0 mr-auto">
@@ -111,7 +107,7 @@ export default function Home() {
               title="Berna"
               subtitle="Digital medical records for Sub-Saharan Africa"
               text="I co-founded Berna to improve the quality and efficiency of health care in Sub-Saharan Africa. I designed and built our web product using React and GraphQL with a focus on security, accessibility, performance, and ease of use, while ensuring we can iterate on the product very quickly."
-              illustrationUrl="/berna-illustration.svg"
+              illustration={BernaIllustration}
               illustrationAlt="Berna illustration"
               linkText="Visit berna.health"
               linkUrl="https://berna.health"
@@ -120,7 +116,7 @@ export default function Home() {
               title="6 River Systems (Owned by Shopify)"
               subtitle="Flexible warehouse fulfillment solution"
               text="As a senior software engineer, I architected and led the development of a new React and GraphQL web application used by warehouse managers, implemented internationalization best practices, and collaborated with the UX team from Shopify on features."
-              illustrationUrl="/6river-illustration.svg"
+              illustration={SixRiverIllustration}
               illustrationAlt="6 River Systems illustration"
               linkText="Visit 6river.com"
               linkUrl="https://6river.com"
@@ -130,7 +126,7 @@ export default function Home() {
               title="Lola"
               subtitle="Super-simple corporate travel management"
               text="Throughout my time at Lola, I held 3 different roles in which I contributed to the main web product using React and GraphQL, led a team, spearheaded a frontend guild meeting, led the internationalization of our frontend codebase, mentored frontend engineers, and championed a transition from a monolith to micro-frontends to make teams more efficient and autonomous."
-              illustrationUrl="/lola-illustration.svg"
+              illustration={LolaIllustration}
               illustrationAlt="Lola illustration"
               linkText="Visit lola.com"
               linkUrl="https://lola.com"
@@ -139,7 +135,7 @@ export default function Home() {
               title="Atomize"
               subtitle="A detailed Atom One Dark theme for Visual Studio Code"
               text="I've always loved the UI and UX of Atom, but prefer the speed and reliability of VS Code. After looking for a while, I couldn't find any VS Code theme that accurately replicated Atom One Dark's interface and syntax highlighting, so I made this one."
-              illustrationUrl="/atomize-illustration.svg"
+              illustration={AtomizeIllustration}
               illustrationAlt="Atomize illustration"
               linkText="View on Github"
               linkUrl="https://github.com/emroussel/atomize"
