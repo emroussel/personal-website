@@ -35,9 +35,6 @@ export function Head({ children, title = defaultTitle }) {
 
       <link rel="canonical" href={url} />
 
-      <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="" />
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
       {children}
     </NextHead>
   );

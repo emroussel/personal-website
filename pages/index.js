@@ -49,7 +49,7 @@ export default function Home() {
 
   useEffect(() => {
     setIsClipboardSupported(!!(navigator.clipboard && navigator.clipboard.writeText));
-  });
+  }, []);
 
   return (
     <>
