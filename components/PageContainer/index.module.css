@@ -1,0 +1,151 @@
+@screen sm {
+  .underline {
+    @apply relative pb-2;
+  }
+  
+  .selected,
+  .underline:hover {
+    @apply opacity-100;
+  }
+  
+  .underline:hover span {
+    @apply opacity-80;
+  }
+  
+  .underline:before {
+    content: "";
+    @apply absolute w-0 bottom-0 left-0 bg-secondary invisible motion-safe:transition-all motion-safe:duration-300 rounded;
+    height: 2px;
+  }
+
+  :global(.dark) .underline:before {
+    @apply bg-secondary-light;
+  }
+  
+  .selected:before,
+  .underline:hover:before {
+    @apply visible w-full;
+  }
+}
+
+.footer-link {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  @apply inline-block font-bold text-lg sm:text-xl;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tab-animation-open:nth-of-type(1) {
+    animation: slide-in 300ms ease-in-out both;
+  }
+
+  .tab-animation-open:nth-of-type(2) {
+    animation: slide-in 300ms ease-in-out 60ms both;
+  }
+
+  .tab-animation-open:nth-of-type(3) {
+    animation: slide-in 300ms ease-in-out 120ms both;
+  }
+
+  .theme-button-animation-open {
+    animation: slide-in 300ms ease-in-out 180ms both;
+  }
+}
+
+@screen sm {
+  .tab-animation-open {
+    animation: none !important;
+  }
+
+  .theme-button-animation-open {
+    animation: none !important;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tab-animation-close:nth-of-type(1) {
+    animation: slide-out 200ms ease-in-out both;
+  }
+
+  .tab-animation-close:nth-of-type(2) {
+    animation: slide-out 200ms ease-in-out 40ms both;
+  }
+
+  .tab-animation-close:nth-of-type(3) {
+    animation: slide-out 200ms ease-in-out 80ms both;
+  }
+
+  .theme-button-animation-close {
+    animation: slide-out 200ms ease-in-out 120ms both;
+  }
+}
+
+@screen sm {
+  .tab-animation-close {
+    animation: none !important;
+  }
+
+  .theme-button-animation-close {
+    animation: none !important;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .menu-animation-open {
+    animation: fade-in 250ms ease-in-out forwards;
+  }
+}
+
+@screen sm {
+  .menu-animation-open {
+    @apply animate-none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    @apply opacity-50;
+  }
+  to {
+    @apply opacity-100;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .menu-animation-close {
+    animation: fade-out 250ms ease-in-out 50ms both;
+  }
+}
+
+@screen sm {
+  .menu-animation-close {
+    @apply animate-none;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    @apply opacity-100;
+  }
+  to {
+    @apply opacity-0;
+  }
+}

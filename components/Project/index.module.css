@@ -1,0 +1,9 @@
+.project-image {
+  max-width: 25rem;
+}
+
+@screen md {
+  .project-image {
+    max-width: 27rem;
+  }
+}

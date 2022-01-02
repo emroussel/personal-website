@@ -2,26 +2,30 @@ import NextHead from "next/head";
 import { useRouter } from "next/router";
 
 const defaultTitle = "Emmanuel Roussel";
-const description =
-  "I’m a Canadian software engineer with a passion for building digital products that positively impact communities.";
+const defaultDescription =
+  "I'm a software developer with a passion for building digital products that positively impact communities.";
 const baseUrl = "https://emroussel.com";
 
-export function Head({ children, title = defaultTitle }) {
+export function Head({
+  children,
+  title = defaultTitle,
+  description: propDescription,
+}) {
   const router = useRouter();
   const url = `${baseUrl}${router.pathname === "/" ? "" : router.pathname}`;
+  const description = propDescription || defaultDescription;
 
   return (
     <NextHead>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content="emmanuel,roussel,emmanuel roussel,emroussel,javascript,react,frontend,design" />
 
       {/* Open Graph */}
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content={title} />
+      <meta property="og:site_name" content="Emmanuel Roussel" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary" />
