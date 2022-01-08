@@ -27,7 +27,7 @@ export default function About() {
               I&#39;m an optimist who believes things can be better than they
               currently are. Phrases like &#34;because it&#39;s always been done
               this way&#34; are not part of my vocabulary – I instead value
-              open-mindedness and outside the box thinking.
+              open-mindedness and outside-the-box thinking.
             </p>
             <p className="mt-4">
               While most of my experience building digital products is in
@@ -39,12 +39,12 @@ export default function About() {
               should be delightful for everyone to use.
             </p>
             <p className="mt-4">
-              With a strong attention to detail, a product mindset, and a design
+              With a strong attention to detail, product mindset, and design
               sense, I&#39;m at my best when working in small independent and
               collaborative teams solving tangible problems (usually at smaller
               organizations where I can have a greater impact) or as a startup
               founder. I&#39;m a fast learner who&#39;s not afraid to get his
-              hands dirty and to wear multiple hats.
+              hands dirty and wear multiple hats.
             </p>
             <p className="mt-4">
               On the practical side, most of my experience is in building and
@@ -104,7 +104,7 @@ export default function About() {
           <Project
             title="Lola"
             secondSubtitle="October 2017 – March 2020"
-            text="Throughout my time at Lola, I held 3 different roles in which I contributed to the main web product using React and GraphQL, led a team, spearheaded a frontend guild meeting, internationalizationed the frontend codebase, mentored developers, and advised teams on feature implementation."
+            text="Throughout my time at Lola, I held 3 different roles in which I contributed to the main web product using React and GraphQL, led a team, spearheaded a frontend guild meeting, internationalized the frontend codebase, mentored developers, and advised teams on feature implementation."
             illustration={LolaIllustration}
             illustrationAlt="Lola illustration"
             isRight

@@ -35,7 +35,7 @@ export default function Freelance() {
         <section className="sm:mt-32 mt-16">
           <Project
             title="Ulysse"
-            text="I started working with Ulysse to help them re-build their product from scratch, applying everything they had learned from the previous iteration with the goal of having a cleaner codebase and better UX in order to start scaling. They brought me on specifically to coach their team on React, architect the frontend application, and make it fully accessible."
+            text="With the goal of having a cleaner codebase and better UX in order to start scaling, Ulysse brought me on to help them re-build their product from scratch, applying everything they had learned from the previous iteration. During this project, I coached their team on React, architected the frontend application, and made it accessible."
             illustration={UlysseIllustration}
             illustrationAlt="Ulysse illustration"
             linkText="Visit ulysse.com"
@@ -59,7 +59,7 @@ export default function Freelance() {
                 </a>{" "}
                 brought me on to help supplement their team during this project.
                 I collaborated with them to build part of the accessible
-                component library and to integrate algolia search to Koala&#39;s
+                component library and integrate algolia search to Koala&#39;s
                 new e-commerce site.
               </span>
             }
