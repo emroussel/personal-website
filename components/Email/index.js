@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { ExternalLink } from "../ExternalLink";
-import { CopyEmailContext } from "../../providers/CopyEmail";
+import { CopyEmailContext } from "../../providers/copy-email";
 
 export function Email({ className }) {
   const [isClipboardSupported, setIsClipboardSupported] = useState(false);

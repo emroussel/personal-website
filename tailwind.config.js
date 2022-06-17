@@ -68,12 +68,30 @@ module.exports = {
             transform: "translateX(-50vw)",
           },
         },
+        slideUp: {
+          from: {
+            transform: "translateY(100%)",
+          },
+          to: {
+            transform: "translateY(0)",
+          },
+        },
+        swipeOut: {
+          from: {
+            transform: "translateY(var(--radix-toast-swipe-end-y))",
+          },
+          to: {
+            transform: "translateY(100%)",
+          },
+        },
       },
       animation: {
         "fade-in": "fadeIn 250ms ease-in-out",
         "fade-out": "fadeOut 150ms ease-in-out",
         "slide-in": "slideIn 250ms ease-in-out backwards",
         "slide-out": "slideOut 150ms ease-in-out forwards",
+        "slide-up": "slideUp 250ms ease-in-out",
+        "swipe-out": "swipeOut 150ms ease-in-out",
       },
     }
   },
@@ -82,6 +100,9 @@ module.exports = {
     plugin(function ({ addVariant }) {
       addVariant("state-open", "&[data-state='open']");
       addVariant("state-closed", "&[data-state='closed']");
+      addVariant("swipe-move", "&[data-swipe='move']");
+      addVariant("swipe-cancel", "&[data-swipe='cancel']");
+      addVariant("swipe-end", "&[data-swipe='end']");
     }),
   ],
 };

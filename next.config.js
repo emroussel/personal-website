@@ -1,4 +1,7 @@
 module.exports = {
+  eslint: {
+    dirs: ["components", "pages", "providers", "styles"],
+  },
   async headers() {
     return [
       {

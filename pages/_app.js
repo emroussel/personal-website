@@ -1,7 +1,7 @@
 import { IdProvider } from "@radix-ui/react-id";
 import { ThemeProvider } from "next-themes";
 import "../styles/globals.css";
-import { CopyEmailProvider } from "../providers/CopyEmail";
+import { CopyEmailProvider } from "../providers/copy-email";
 
 function MyApp({ Component, pageProps }) {
   return (
