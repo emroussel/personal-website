@@ -6,26 +6,65 @@ import clsx from "clsx";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Email } from "../Email";
 import { ExternalLink } from "../ExternalLink";
-import { usePrefersReducedMotion } from "../../hooks/prefers-reduced-motion";
 import styles from "./index.module.css";
 
-function Tab({ href, label, isMenuClosing }) {
+function DesktopTab({ href, children }) {
   const router = useRouter();
+  const isCurrentPage = router.pathname === href;
+
+  return (
+    <Link href={href}>
+      <a
+        className="px-2 inline-block font-semibold text-lg no-underline"
+        onMouseEnter={(e) => {
+          // `px-2` above adds 8px padding on each side, which we need to offset here
+          document.documentElement.style.setProperty(
+            "--emroussel-tab-hover-x",
+            e.target.offsetLeft + 8 + "px"
+          );
+          document.documentElement.style.setProperty(
+            "--emroussel-tab-hover-width",
+            e.target.getBoundingClientRect().width - 16 + "px"
+          );
+        }}
+        onMouseLeave={() => {
+          document.documentElement.style.setProperty(
+            "--emroussel-tab-hover-width",
+            "0px"
+          );
+        }}
+        aria-current={isCurrentPage ? "page" : undefined}
+      >
+        <span
+          className={clsx(
+            "py-1 inline-block border-b-2 pointer-events-none no-underline",
+            {
+              "border-secondary dark:border-secondary-light": isCurrentPage,
+              "border-transparent": !isCurrentPage,
+            }
+          )}
+        >
+          {children}
+        </span>
+      </a>
+    </Link>
+  );
+}
+
+function MobileTab({ href, children }) {
+  const router = useRouter();
+  const isCurrentPage = router.pathname === href;
 
   return (
     <Link href={href}>
       <a
         className={clsx(
-          "inline font-semibold text-3xl sm:text-lg no-underline py-2 sm:py-1 my-1 sm:my-0 sm:ml-4",
-          styles.underline,
-          styles["tab-animation-open"],
-          {
-            [styles["tab-animation-close"]]: isMenuClosing,
-            [styles.selected]: router.pathname === href,
-          }
+          styles.tab,
+          "font-semibold text-3xl my-2 py-1 no-underline"
         )}
+        aria-current={isCurrentPage ? "page" : undefined}
       >
-        <span>{label}</span>
+        {children}
       </a>
     </Link>
   );
@@ -88,24 +127,6 @@ function ThemeButton({ isSmall }) {
 }
 
 export function PageContainer({ children }) {
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
-  const [isMenuClosing, setIsMenuClosing] = useState(false);
-
-  const prefersReducedMotion = usePrefersReducedMotion();
-
-  const onCloseMenu = () => {
-    if (prefersReducedMotion) {
-      setIsMenuVisible(false);
-      setIsMenuClosing(false);
-    } else {
-      setIsMenuClosing(true);
-      setTimeout(() => {
-        setIsMenuVisible(false);
-        setIsMenuClosing(false);
-      }, 250);
-    }
-  };
-
   const logo = (
     <Link href="/">
       <a className="font-bold text-xl sm:text-2xl no-underline py-1 leading-tight">
@@ -120,26 +141,18 @@ export function PageContainer({ children }) {
         {logo}
         <nav>
           <div className="hidden sm:flex items-center">
-            <div>
-              <Tab href="/about" label="About" />
-              <Tab href="/freelance" label="Freelance" />
-              <Tab href="/projects" label="Projects" />
+            <div className="relative">
+              <DesktopTab href="/about">About</DesktopTab>
+              <DesktopTab href="/freelance">Freelance</DesktopTab>
+              <DesktopTab href="/projects">Projects</DesktopTab>
+              <div className="h-[2px] w-[var(--emroussel-tab-hover-width)] rounded bg-secondary dark:bg-secondary-light absolute bottom-0 left-[var(--emroussel-tab-hover-x)] motion-safe:transition-[left,width] motion-safe:duration-300 motion-safe:ease-in-out" />
             </div>
-            <div className="ml-6">
+            <div className="ml-4">
               <ThemeButton isSmall />
             </div>
           </div>
           <div className="sm:hidden">
-            <Dialog.Root
-              open={isMenuVisible}
-              onOpenChange={(isOpen) => {
-                if (!isOpen) {
-                  onCloseMenu();
-                } else {
-                  setIsMenuVisible(isOpen);
-                }
-              }}
-            >
+            <Dialog.Root>
               <Dialog.Trigger asChild>
                 <button
                   type="button"
@@ -159,70 +172,42 @@ export function PageContainer({ children }) {
                 </button>
               </Dialog.Trigger>
               <Dialog.Portal>
-                <Dialog.Overlay />
-                <Dialog.Content asChild>
-                  <div className="relative" style={{ zIndex: 2147483647 }}>
-                    <div
-                      className={clsx(
-                        "fixed w-screen h-screen top-0 px-4 flex flex-col bg-white dark:bg-gray-dark",
-                        styles["menu-animation-open"],
-                        {
-                          [styles["menu-animation-close"]]: isMenuClosing,
-                        }
-                      )}
-                    >
-                      <header className="py-4 flex justify-between items-center w-full">
-                        {logo}
-                        <Dialog.Close asChild>
-                          <button
-                            type="button"
-                            className="rounded-full w-12 py-2 bg-gray-lightest dark:bg-gray text-gray dark:text-off-white"
-                            aria-label="Close navigation menu"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="h-5 w-5 mx-auto"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
-                          </button>
-                        </Dialog.Close>
-                      </header>
-                      <div className="flex flex-col flex-1 justify-center mb-4">
-                        <Tab
-                          href="/about"
-                          label="About"
-                          isMenuClosing={isMenuClosing}
-                        />
-                        <Tab
-                          href="/freelance"
-                          label="Freelance"
-                          isMenuClosing={isMenuClosing}
-                        />
-                        <Tab
-                          href="/projects"
-                          label="Projects"
-                          isMenuClosing={isMenuClosing}
-                        />
-                        <div
-                          className={clsx(
-                            "mt-10",
-                            styles["theme-button-animation-open"],
-                            {
-                              [styles["theme-button-animation-close"]]:
-                                isMenuClosing,
-                            }
-                          )}
+                <Dialog.Content
+                  className={clsx(
+                    styles.menu,
+                    "fixed top-0 right-0 bottom-0 left-0 overflow-y-scroll bg-white dark:bg-gray-dark flex flex-col px-4 group motion-safe:state-open:animate-fade-in motion-safe:state-closed:animate-fade-out"
+                  )}
+                  style={{ zIndex: 2147483647 }}
+                >
+                  <header className="py-4 flex justify-between items-center w-full">
+                    {logo}
+                    <Dialog.Close asChild>
+                      <button
+                        type="button"
+                        className="rounded-full w-12 py-2 bg-gray-lightest dark:bg-gray text-gray dark:text-off-white"
+                        aria-label="Close navigation menu"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5 mx-auto"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
                         >
-                          <ThemeButton />
-                        </div>
-                      </div>
+                          <path
+                            fillRule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </Dialog.Close>
+                  </header>
+                  <div className="flex flex-col flex-1 justify-center mb-4">
+                    <MobileTab href="/about">About</MobileTab>
+                    <MobileTab href="/freelance">Freelance</MobileTab>
+                    <MobileTab href="/projects">Projects</MobileTab>
+                    <div className={clsx("mt-10", styles.tab)}>
+                      <ThemeButton />
                     </div>
                   </div>
                 </Dialog.Content>
@@ -236,14 +221,12 @@ export function PageContainer({ children }) {
         <div>
           <ul className="flex-1">
             <li>
-              <Email
-                className={clsx("flex items-center", styles["footer-link"])}
-              />
+              <Email className="flex items-center inline-block font-bold text-lg sm:text-xl py-0.5" />
             </li>
             <li>
               <ExternalLink
                 href="https://github.com/emroussel"
-                className={styles["footer-link"]}
+                className="inline-block font-bold text-lg sm:text-xl py-0.5"
               >
                 Github
               </ExternalLink>
@@ -251,7 +234,7 @@ export function PageContainer({ children }) {
             <li>
               <ExternalLink
                 href="https://www.linkedin.com/in/emroussel"
-                className={styles["footer-link"]}
+                className="inline-block font-bold text-lg sm:text-xl py-0.5"
               >
                 LinkedIn
               </ExternalLink>
@@ -259,7 +242,7 @@ export function PageContainer({ children }) {
             <li>
               <ExternalLink
                 href="/resume.pdf"
-                className={styles["footer-link"]}
+                className="inline-block font-bold text-lg sm:text-xl py-0.5"
               >
                 Resume
               </ExternalLink>
