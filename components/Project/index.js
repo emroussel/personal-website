@@ -28,9 +28,9 @@ export function Project({
       >
         <div
           className={clsx("absolute w-3/4 max-w-xs inset-y-0", {
-            "bg-secondary dark:bg-secondary-light rounded-l-lg lg:rounded-r-lg right-0 -mr-4 sm:-mr-8 lg:mr-0":
+            "bg-secondary dark:bg-secondary-light rounded-l-xl lg:rounded-r-xl right-0 -mr-4 sm:-mr-8 lg:mr-0":
               isRight,
-            "bg-primary dark:bg-primary-light rounded-r-lg lg:rounded-l-lg -ml-4 sm:-ml-8 lg:ml-0":
+            "bg-primary dark:bg-primary-light rounded-r-xl lg:rounded-l-xl -ml-4 sm:-ml-8 lg:ml-0":
               !isRight,
           })}
         />
@@ -40,7 +40,7 @@ export function Project({
             "lg:pl-8": !isRight,
           })}
         >
-          <div className="rounded-lg overflow-hidden shadow-lg">
+          <div className="rounded-xl overflow-hidden shadow-lg">
             <Image
               src={illustration}
               alt={illustrationAlt || ""}

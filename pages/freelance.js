@@ -5,6 +5,8 @@ import { Title } from "../components/Title";
 import { PageContainer } from "../components/PageContainer";
 import UlysseIllustration from "../public/ulysse-illustration.svg";
 import KoalaIllustration from "../public/koala-illustration.svg";
+import DFlowIllustration from "../public/dflow-illustration.svg";
+import TsunamiIllustration from "../public/tsunami-illustration.svg";
 
 export default function Freelance() {
   return (
@@ -24,8 +26,8 @@ export default function Freelance() {
               performant, easy to iterate on, etc.
             </p>
             <p className="mt-4">
-              My favorite technologies are React, Next.js, Tailwind CSS, and
-              Radix UI, but I&#39;m also not afraid to learn new ones.
+              My favorite technologies are React, TypeScript, Next.js, Tailwind
+              CSS, and Radix UI, but I&#39;m also not afraid to learn new ones.
             </p>
             <p className="mt-4">
               Reach out to me at <Email /> if you want to work together!
@@ -33,6 +35,63 @@ export default function Freelance() {
           </div>
         </section>
         <section className="sm:mt-32 mt-16">
+          <Project
+            title="Tsunami"
+            text={
+              <span>
+                I built the frontend of this Solana token trading website for
+                DFlow, integrating with their blockchain sdk and collaborating
+                with{" "}
+                <a
+                  href="https://upstatement.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Upstatement
+                </a>{" "}
+                on the design.
+                <br />
+                <br />
+                Coming soon.
+              </span>
+            }
+            illustration={TsunamiIllustration}
+            illustrationAlt="Tsunami illustration"
+            badges={[
+              { label: "Next.js" },
+              { label: "TypeScript" },
+              { label: "Radix UI" },
+              { label: "Tailwind CSS" },
+            ]}
+          />
+          <Project
+            title="DFlow"
+            text={
+              <span>
+                I worked with{" "}
+                <a
+                  href="https://upstatement.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Upstatement
+                </a>{" "}
+                to build this marketing website for DFlow, Upstatement being in
+                charge of the design and myself of the implementation.
+              </span>
+            }
+            illustration={DFlowIllustration}
+            illustrationAlt="DFlow illustration"
+            linkText="Visit dflow.net"
+            linkUrl="https://dflow.net/"
+            isRight
+            badges={[
+              { label: "Next.js" },
+              { label: "TypeScript" },
+              { label: "Radix UI" },
+              { label: "Tailwind CSS" },
+            ]}
+          />
           <Project
             title="Ulysse"
             text="With the goal of having a cleaner codebase and better UX in order to start scaling, Ulysse brought me on to help them re-build their product from scratch, applying everything they had learned from the previous iteration. During this project, I coached their team on React, architected the frontend application, and made it accessible."

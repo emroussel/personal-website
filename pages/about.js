@@ -21,7 +21,7 @@ export default function About() {
               in Seoul, Korea. I&#39;m the co-founder of{" "}
               <ExternalLink href="https://berna.health">Berna</ExternalLink>, a
               startup improving the quality and efficiency of health care in
-              Sub-Saharan Africa by digitizing medical records.
+              Rwanda using digital medical records.
             </p>
             <p className="mt-4">
               I&#39;m an optimist who believes things can be better than they
@@ -62,13 +62,12 @@ export default function About() {
           <Project
             title="Freelance"
             subtitle="January 2021 – Present"
-            text="I build accessible React and Next.js applications for startups. Some of my past projects include implementing internationalization, creating component libraries, improving the accessibility/performance of applications, coaching teams, etc."
+            text="I build React and Next.js applications for startups. Some of my past projects include implementing internationalization, creating component libraries, improving the accessibility/performance of applications, coaching teams, etc."
             illustration={EmrousselIllustration}
             illustrationAlt="Personal website illustration"
             linkText="Read more about my freelance projects"
             linkUrl="/freelance"
             badges={[
-              { label: "React" },
               { label: "Next.js" },
               { label: "Radix UI" },
               { label: "Tailwind CSS" },
@@ -77,7 +76,7 @@ export default function About() {
           <Project
             title="Berna"
             subtitle="January 2020 – Present"
-            text="I co-founded Berna to improve the quality and efficiency of health care in Sub-Saharan Africa by digitalizing medical records. I designed and built our web product with a focus on UX and accessibility while ensuring we can iterate on the product very quickly."
+            text="I co-founded Berna to improve the quality and efficiency of health care in Rwanda using digital medical records. I designed and built our web product with a focus on UX and accessibility while ensuring we can iterate on the product very quickly."
             illustration={BernaIllustration}
             illustrationAlt="Berna illustration"
             isRight
