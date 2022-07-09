@@ -9,6 +9,17 @@ import KoalaIllustration from "../public/koala-illustration.svg";
 import DFlowIllustration from "../public/dflow-illustration.svg";
 import TsunamiIllustration from "../public/tsunami-illustration.svg";
 
+function Quote({ author, children }) {
+  return (
+    <figure className="text-center mt-24 sm:mt-32 max-w-3xl mx-auto w-full relative">
+      <blockquote className="sm:text-lg font-semibold before:content-['“'] before:absolute before:left-0 before:lg:-translate-x-[120%] before:-top-10 before:lg:-top-2 before:text-7xl before:opacity-20 after:content-['”'] after:absolute after:right-0 after:lg:translate-x-[120%] after:-top-10 after:lg:-top-2 after:text-7xl after:opacity-20">
+        {children}
+      </blockquote>
+      <figcaption className="mt-4">- {author}</figcaption>
+    </figure>
+  );
+}
+
 export default function Freelance() {
   return (
     <PageContainer>
@@ -62,6 +73,17 @@ export default function Freelance() {
               { label: "Tailwind CSS" },
             ]}
           />
+          <Quote author="Mike Swartz, Principal @ Upstatement">
+            Working with Emmanuel is a joy – he is a fast, confident, and
+            extremely sharp developer who helped us take our ideas from design
+            to app. He is also a talented problem solver and partner in product
+            design, and talking through potential solutions and approaches with
+            him made the final product better. Emmanuel also managed the project
+            deftly, keeping an eye on timeline, communicating with us and the
+            ultimate client, and despite doing all this from multiple time zones
+            it never felt like he was far away. You can&#39;t have a better
+            engineer on your team, hire Emmanuel!
+          </Quote>
           <Project
             title="DFlow"
             text={
@@ -86,6 +108,11 @@ export default function Freelance() {
               { label: "Tailwind CSS" },
             ]}
           />
+          <Quote author="Nitesh Nath, Founder @ DFlow">
+            Working with Emmanuel was an excellent experience. He delivered
+            excellent software engineering work with the right vision and
+            incredible speed. Could not recommend more highly!
+          </Quote>
           <Project
             title="Ulysse"
             text="With the goal of having a cleaner codebase and better UX in order to start scaling, Ulysse brought me on to help them re-build their product from scratch, applying everything they had learned from the previous iteration. During this project, I coached their team on React, architected the frontend application, and made it accessible."
@@ -99,6 +126,14 @@ export default function Freelance() {
               { label: "Tailwind CSS" },
             ]}
           />
+          <Quote author="Lancelot Hardel, CTO @ Ulysse">
+            We loved to work with Emmanuel. He really helped us to level up the
+            experience on our product, either by his own suggestions, or by
+            writing excellent and performant code. He also mentored our existing
+            front-end developers on best practices and accessibility. Definitely
+            an incredible addition to our team, we couldn&#39;t recommend him
+            enough.
+          </Quote>
           <Project
             title="Koala"
             text={
@@ -119,6 +154,14 @@ export default function Freelance() {
             isRight
             badges={[{ label: "Next.js" }, { label: "TypeScript" }]}
           />
+          <Quote author="Mike Burns, Executive Director of Engineering @ Upstatement">
+            Emmanuel quickly established himself as a go-to resource for
+            building out complex front-end applications. Our designers love his
+            keen eye for detail and approachable communication style, and our
+            engineers appreciate his balance of speed, quality, and big picture
+            thinking. He truly felt like an extension of our team; we&#39;d hire
+            him again in a heartbeat!
+          </Quote>
         </section>
       </main>
     </PageContainer>
