@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 const defaultTitle = "Emmanuel Roussel";
 const defaultDescription =
-  "I'm a JavaScript and React software engineer who builds digital products that deliver outstanding user experiences.";
+  "I’m a product-minded software engineer who builds digital products that deliver outstanding user experiences using JavaScript and React.";
 const baseUrl = "https://emroussel.com";
 
 export function Head({
