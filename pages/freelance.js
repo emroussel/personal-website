@@ -2,6 +2,7 @@ import { Head } from "../components/Head";
 import { Email } from "../components/Email";
 import { Project } from "../components/Project";
 import { Title } from "../components/Title";
+import { ExternalLink } from "../components/ExternalLink";
 import { PageContainer } from "../components/PageContainer";
 import UlysseIllustration from "../public/ulysse-illustration.svg";
 import KoalaIllustration from "../public/koala-illustration.svg";
@@ -13,21 +14,22 @@ export default function Freelance() {
     <PageContainer>
       <Head
         title="Freelance | Emmanuel Roussel"
-        description="I'm available for freelance! I specialize in helping startups build lean web products using React."
+        description="I'm available for freelance! I specialize in building web products using JavaScript and React."
       />
       <main className="sm:pb-16 pb-8">
         <section className="max-w-screen-sm mx-auto md:mt-16 mt-8">
           <Title>I&#39;m Available For Freelance!</Title>
           <div className="mt-12">
             <p className="mt-4">
-              I specialize in helping startups build lean web products using
-              React. I have experience architecting new applications and
-              improving existing ones, including making them fully accessible,
-              performant, easy to iterate on, etc.
+              I specialize in building web products using JavaScript and React.
+              Some of my past projects include building complex frontends from
+              scratch, creating component libraries, improving the
+              accessibility/performance of applications, coaching teams, etc.
             </p>
             <p className="mt-4">
               My favorite technologies are React, TypeScript, Next.js, Tailwind
-              CSS, and Radix UI, but I&#39;m also not afraid to learn new ones.
+              CSS, and Radix UI, but I&#39;m a fast learner who can quickly pick
+              up new ones.
             </p>
             <p className="mt-4">
               Reach out to me at <Email /> if you want to work together!
@@ -42,13 +44,9 @@ export default function Freelance() {
                 I built the frontend of this Solana token trading website for
                 DFlow, integrating with their blockchain sdk and collaborating
                 with{" "}
-                <a
-                  href="https://upstatement.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <ExternalLink href="https://upstatement.com/">
                   Upstatement
-                </a>{" "}
+                </ExternalLink>{" "}
                 on the design.
                 <br />
                 <br />
@@ -69,13 +67,9 @@ export default function Freelance() {
             text={
               <span>
                 I worked with{" "}
-                <a
-                  href="https://upstatement.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <ExternalLink href="https://upstatement.com/">
                   Upstatement
-                </a>{" "}
+                </ExternalLink>{" "}
                 to build this marketing website for DFlow, Upstatement being in
                 charge of the design and myself of the implementation.
               </span>
@@ -109,13 +103,9 @@ export default function Freelance() {
             title="Koala"
             text={
               <span>
-                <a
-                  href="https://upstatement.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <ExternalLink href="https://upstatement.com/">
                   Upstatement
-                </a>{" "}
+                </ExternalLink>{" "}
                 brought me on to help supplement their team during this project.
                 I collaborated with them to build part of the accessible
                 component library and integrate algolia search to Koala&#39;s

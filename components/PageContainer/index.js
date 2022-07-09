@@ -129,7 +129,10 @@ function ThemeButton({ isSmall }) {
 export function PageContainer({ children }) {
   const logo = (
     <Link href="/">
-      <a className="font-bold text-xl sm:text-2xl no-underline py-1 leading-tight">
+      <a
+        className="font-bold text-xl sm:text-2xl no-underline py-1 leading-tight"
+        aria-label="Emmanuel Roussel homepage"
+      >
         Emmanuel Roussel
       </a>
     </Link>

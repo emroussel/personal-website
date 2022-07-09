@@ -21,6 +21,7 @@ export function Email({ className }) {
           navigator.clipboard.writeText("emmanuel@emroussel.com");
           showCopyEmailToast();
         }}
+        aria-label="emmanuel@emroussel.com, copy email to clipboard"
       >
         emmanuel@emroussel.com
       </button>
