@@ -46,11 +46,11 @@ export default function About() {
               get his hands dirty or wear multiple hats.
             </p>
             <p className="mt-4">
-              On the practical side, most of my experience is in building and
-              designing web applications using JavaScript, TypeScript, React,
-              Next.js, and GraphQL. I&#39;ve also led teams, architected new
-              projects, built accessible component libraries, internationalized
-              codebases, and mentored engineers.
+              On the practical side, I specialize in building and designing web
+              applications using JavaScript, TypeScript, React, Next.js, and
+              GraphQL. I&#39;ve also led teams, architected new projects, built
+              accessible component libraries, internationalized codebases, and
+              mentored engineers.
             </p>
             <p className="mt-4">
               You can read more about my professional experience below.
