@@ -59,13 +59,12 @@ export default function Freelance() {
                   Upstatement
                 </ExternalLink>{" "}
                 on the design.
-                <br />
-                <br />
-                Coming soon.
               </span>
             }
             illustration={TsunamiIllustration}
             illustrationAlt="Tsunami illustration"
+            linkText="Visit app.tsunami.so"
+            linkUrl="https://app.tsunami.so/"
             badges={[
               { label: "Next.js" },
               { label: "TypeScript" },

@@ -29,8 +29,7 @@ export default function Home() {
           <h2 className="text-center md:text-left mx-auto md:mx-0 mt-4 md:mt-6 lg:mt-8 font-normal text-lg lg:text-xl max-w-lg">
             I&#39;m a product-minded software engineer who builds digital
             products that deliver outstanding user experiences using JavaScript
-            and React. I&#39;m currently looking for my next role – reach out if
-            you want to work together!
+            and React.
           </h2>
           <Link href="/about">
             <a className="block text-center md:text-left text-lg lg:text-xl mt-2 lg:mt-4 font-normal">
