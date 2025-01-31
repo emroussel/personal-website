@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 const defaultTitle = "Emmanuel Roussel";
 const defaultDescription =
-  "I’m a product-minded software engineer who builds digital products that deliver outstanding user experiences using JavaScript and React.";
+  "I’m a product-minded software engineer with a focus on building digital products that deliver outstanding user experiences.";
 const baseUrl = "https://emroussel.com";
 
 export function Head({
@@ -12,7 +12,7 @@ export function Head({
   description: propDescription,
 }) {
   const router = useRouter();
-  const url = `${baseUrl}${router.pathname === "/" ? "" : router.pathname}`;
+  const url = new URL(router.pathname, baseUrl).toString();
   const description = propDescription || defaultDescription;
 
   return (
@@ -29,8 +29,6 @@ export function Head({
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@rousselmm" />
-      <meta name="twitter:creator" content="@rousselmm" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image:alt" content={title} />

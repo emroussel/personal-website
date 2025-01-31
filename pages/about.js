@@ -16,11 +16,11 @@ export default function About() {
       <Head title="About | Emmanuel Roussel" />
       <main className="sm:pb-16 pb-8">
         <section className="md:mt-16 mt-8 max-w-screen-sm mx-auto">
-          <Title>Software Engineer, Designer & Entrepreneur</Title>
+          <Title>Product-minded software Engineer</Title>
           <div className="mt-6 sm:mt-8 md:mt-12">
             <p className="font-semibold sm:text-lg text-base">
               I&#39;m a software engineer from Québec, Canada, living in London,
-              UK. I&#39;m currently a Lead Engineer at{" "}
+              UK. I&#39;m currently a lead software engineer at{" "}
               <ExternalLink href="https://upstatement.com">
                 Upstatement
               </ExternalLink>{" "}
@@ -65,20 +65,21 @@ export default function About() {
           <Project
             title="Upstatement"
             subtitle="October 2022 – Present"
-            text="As a lead engineer, I'm a hands-on maker and strategist tasked with transforming creative concepts into production realities for clients, closely collaborating with product and design at every phase of the project life cycle while mentoring a team."
+            text="As a lead software engineer, I'm a hands-on maker and strategist tasked with transforming creative concepts into production realities for clients, closely collaborating with product and design at every phase of the project life cycle while mentoring a team."
             illustration={UpstatementIllustration}
             illustrationAlt="Upstatement website illustration"
             badges={[
               { label: "React" },
               { label: "TypeScript" },
-              { label: "Next.js" },
-              { label: "Radix UI" },
+              { label: "Sass" },
+              { label: "Tailwind CSS" },
+              { label: "D3" },
             ]}
           />
           <Project
             title="Freelance"
             subtitle="January 2021 – Present"
-            text="I specialize in building web products using JavaScript and React. Some of my past projects include building complex frontends from scratch, creating component libraries, improving the accessibility/performance of applications, coaching teams, etc."
+            text="I specialize in building web products using TypeScript and React. Some of my past projects include building complex frontends from scratch, creating component libraries, improving the accessibility/performance of applications, coaching teams, etc."
             illustration={EmrousselIllustration}
             illustrationAlt="Personal website illustration"
             isRight
@@ -122,7 +123,7 @@ export default function About() {
           <Project
             title="Lola"
             subtitle="October 2017 – March 2020"
-            text="Throughout my time at Lola, I held 3 different roles in which I contributed to the React Native app, React web applications, and emails. I also led a team of 6 software engineers, spearheaded a frontend guild meeting, added internationalization to the frontend codebase, and mentored engineers."
+            text="Throughout my time at Lola, I held a few different roles in which I contributed to the React Native app, React web applications, and emails. I also led a team of 6 software engineers, spearheaded a frontend guild meeting, added internationalization to the frontend codebase, and mentored engineers."
             illustration={LolaIllustration}
             illustrationAlt="Lola illustration"
             badges={[{ label: "React" }, { label: "GraphQL" }]}

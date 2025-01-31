@@ -26,11 +26,10 @@ export default function Home() {
           >
             👋 Salut, I&#39;m Emmanuel
           </Title>
-          <h2 className="text-center md:text-left mx-auto md:mx-0 mt-4 md:mt-6 lg:mt-8 font-normal text-lg lg:text-xl max-w-lg">
-            I&#39;m a product-minded software engineer who builds digital
-            products that deliver outstanding user experiences using JavaScript
-            and React.
-          </h2>
+          <p className="text-center md:text-left mx-auto md:mx-0 mt-4 md:mt-6 lg:mt-8 font-normal text-lg lg:text-xl max-w-lg">
+            I&#39;m a product-minded software engineer with a focus on building
+            digital products that deliver outstanding user experiences.
+          </p>
           <Link href="/about">
             <a className="block text-center md:text-left text-lg lg:text-xl mt-2 lg:mt-4 font-normal">
               Learn more about me

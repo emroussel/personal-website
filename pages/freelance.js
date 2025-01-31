@@ -32,7 +32,7 @@ export default function Freelance() {
           <Title>I&#39;m Available For Freelance!</Title>
           <div className="mt-12">
             <p className="mt-4">
-              I specialize in building web products using JavaScript and React.
+              I specialize in building web products using TypeScript and React.
               Some of my past projects include building complex frontends from
               scratch, creating component libraries, improving the
               accessibility/performance of applications, coaching teams, etc.

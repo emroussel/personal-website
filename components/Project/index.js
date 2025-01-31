@@ -55,7 +55,7 @@ export function Project({
         })}
       >
         <h2>{title}</h2>
-        {subtitle ? <h3 className="font-semibold pt-2">{subtitle}</h3> : null}
+        {subtitle ? <p className="font-semibold pt-2">{subtitle}</p> : null}
         <p className="pt-2">{text}</p>
         {badges?.length ? (
           <ul className="mt-2">
