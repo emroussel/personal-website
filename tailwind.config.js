@@ -28,7 +28,7 @@ module.exports = {
       "off-white": "#F4F4F4",
     },
     fontFamily: {
-      sans: ["Inter", ...defaultConfig.theme.fontFamily.sans],
+      sans: ["var(--font-inter)", ...defaultConfig.theme.fontFamily.sans],
     },
     extend: {
       keyframes: {
@@ -93,9 +93,9 @@ module.exports = {
         "slide-up": "slideUp 250ms ease-in-out",
         "swipe-out": "swipeOut 150ms ease-in-out",
       },
-    }
+    },
   },
-  
+
   plugins: [
     plugin(function ({ addVariant }) {
       addVariant("state-open", "&[data-state='open']");

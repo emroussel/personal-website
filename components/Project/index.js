@@ -43,7 +43,7 @@ export function Project({
             <Image
               src={illustration}
               alt={illustrationAlt || ""}
-              layout="responsive"
+              className="relative"
             />
           </div>
         </div>
@@ -71,8 +71,8 @@ export function Project({
           </ul>
         ) : null}
         {linkUrl && linkUrl.startsWith("/") ? (
-          <Link href={linkUrl}>
-            <a className={linkClassName}>{linkText}</a>
+          <Link href={linkUrl} className={linkClassName}>
+            {linkText}
           </Link>
         ) : linkUrl ? (
           <ExternalLink href={linkUrl} className={linkClassName}>

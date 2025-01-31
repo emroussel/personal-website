@@ -14,7 +14,6 @@ export default function Home() {
           <Image
             src={ProfileImage}
             alt="Photo of Emmanuel Roussel"
-            layout="responsive"
             priority
             placeholder="blur"
           />
@@ -30,10 +29,11 @@ export default function Home() {
             I&#39;m a product-minded software engineer with a focus on building
             digital products that deliver outstanding user experiences.
           </p>
-          <Link href="/about">
-            <a className="block text-center md:text-left text-lg lg:text-xl mt-2 lg:mt-4 font-normal">
-              Learn more about me
-            </a>
+          <Link
+            href="/about"
+            className="block text-center md:text-left text-lg lg:text-xl mt-2 lg:mt-4 font-normal"
+          >
+            Learn more about me
           </Link>
         </div>
       </main>

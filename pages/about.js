@@ -16,7 +16,7 @@ export default function About() {
       <Head title="About | Emmanuel Roussel" />
       <main className="sm:pb-16 pb-8">
         <section className="md:mt-16 mt-8 max-w-screen-sm mx-auto">
-          <Title>Product-minded software Engineer</Title>
+          <Title>Product-minded Software Engineer</Title>
           <div className="mt-6 sm:mt-8 md:mt-12">
             <p className="font-semibold sm:text-lg text-base">
               I&#39;m a software engineer from Québec, Canada, living in London,

@@ -7,46 +7,46 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { Email } from "../Email";
 import { ExternalLink } from "../ExternalLink";
 import styles from "./index.module.css";
+import { font } from "../../styles/font";
 
 function DesktopTab({ href, children }) {
   const router = useRouter();
   const isCurrentPage = router.pathname === href;
 
   return (
-    <Link href={href}>
-      <a
-        className="px-2 inline-block font-semibold text-lg no-underline"
-        onMouseEnter={(e) => {
-          // `px-2` above adds 8px padding on each side, which we need to offset here
-          document.documentElement.style.setProperty(
-            "--emroussel-tab-hover-x",
-            e.target.offsetLeft + 8 + "px"
-          );
-          document.documentElement.style.setProperty(
-            "--emroussel-tab-hover-width",
-            e.target.getBoundingClientRect().width - 16 + "px"
-          );
-        }}
-        onMouseLeave={() => {
-          document.documentElement.style.setProperty(
-            "--emroussel-tab-hover-width",
-            "0px"
-          );
-        }}
-        aria-current={isCurrentPage ? "page" : undefined}
+    <Link
+      href={href}
+      className="px-2 inline-block font-semibold text-lg no-underline"
+      onMouseEnter={(e) => {
+        // `px-2` above adds 8px padding on each side, which we need to offset here
+        document.documentElement.style.setProperty(
+          "--emroussel-tab-hover-x",
+          e.target.offsetLeft + 8 + "px"
+        );
+        document.documentElement.style.setProperty(
+          "--emroussel-tab-hover-width",
+          e.target.getBoundingClientRect().width - 16 + "px"
+        );
+      }}
+      onMouseLeave={() => {
+        document.documentElement.style.setProperty(
+          "--emroussel-tab-hover-width",
+          "0px"
+        );
+      }}
+      aria-current={isCurrentPage ? "page" : undefined}
+    >
+      <span
+        className={clsx(
+          "py-1 inline-block border-b-2 pointer-events-none no-underline",
+          {
+            "border-secondary dark:border-secondary-light": isCurrentPage,
+            "border-transparent": !isCurrentPage,
+          }
+        )}
       >
-        <span
-          className={clsx(
-            "py-1 inline-block border-b-2 pointer-events-none no-underline",
-            {
-              "border-secondary dark:border-secondary-light": isCurrentPage,
-              "border-transparent": !isCurrentPage,
-            }
-          )}
-        >
-          {children}
-        </span>
-      </a>
+        {children}
+      </span>
     </Link>
   );
 }
@@ -56,16 +56,15 @@ function MobileTab({ href, children }) {
   const isCurrentPage = router.pathname === href;
 
   return (
-    <Link href={href}>
-      <a
-        className={clsx(
-          styles.tab,
-          "font-semibold text-3xl my-2 py-1 no-underline"
-        )}
-        aria-current={isCurrentPage ? "page" : undefined}
-      >
-        {children}
-      </a>
+    <Link
+      href={href}
+      className={clsx(
+        styles.tab,
+        "font-semibold text-3xl my-2 py-1 no-underline"
+      )}
+      aria-current={isCurrentPage ? "page" : undefined}
+    >
+      {children}
     </Link>
   );
 }
@@ -130,13 +129,12 @@ export function PageContainer({ children }) {
   const navUnderlineAnimationTimeoutRef = useRef();
 
   const logo = (
-    <Link href="/">
-      <a
-        className="font-bold text-xl sm:text-2xl no-underline py-1 leading-tight"
-        aria-label="Emmanuel Roussel homepage"
-      >
-        Emmanuel Roussel
-      </a>
+    <Link
+      href="/"
+      className="font-bold text-xl sm:text-2xl no-underline py-1 leading-tight"
+      aria-label="Emmanuel Roussel homepage"
+    >
+      Emmanuel Roussel
     </Link>
   );
 
@@ -169,7 +167,7 @@ export function PageContainer({ children }) {
               <DesktopTab href="/about">About</DesktopTab>
               <DesktopTab href="/freelance">Freelance</DesktopTab>
               <DesktopTab href="/projects">Projects</DesktopTab>
-              <div className="h-[2px] w-[var(--emroussel-tab-hover-width)] rounded bg-secondary dark:bg-secondary-light absolute bottom-0 left-[var(--emroussel-tab-hover-x)] motion-safe:transition-[left,width] motion-safe:duration-200 motion-safe:ease-in-out" />
+              <div className="h-[2px] w-[var(--emroussel-tab-hover-width)] rounded bg-secondary dark:bg-secondary-light absolute bottom-0 left-[var(--emroussel-tab-hover-x)] motion-safe:transition-[left,width] motion-safe:duration-200 motion-safe:ease-in-out pointer-events-none" />
             </div>
             <div className="ml-4">
               <ThemeButton isSmall />
@@ -177,32 +175,34 @@ export function PageContainer({ children }) {
           </div>
           <div className="sm:hidden">
             <Dialog.Root>
-              <Dialog.Trigger asChild>
-                <button
-                  type="button"
-                  className="rounded-full w-12 py-3 bg-gray-lightest dark:bg-gray text-gray dark:text-off-white"
-                  aria-label="Open navigation menu"
+              <Dialog.Trigger
+                className="rounded-full w-12 py-3 bg-gray-lightest dark:bg-gray text-gray dark:text-off-white"
+                aria-label="Open navigation menu"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-3 w-4 mx-auto"
+                  viewBox="0 0 16 12"
+                  fill="currentColor"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-3 w-4 mx-auto"
-                    viewBox="0 0 16 12"
-                    fill="currentColor"
-                  >
-                    <rect y="9" width="16" height="2" rx="1" />
-                    <rect y="5" width="16" height="2" rx="1" />
-                    <rect y="1" width="16" height="2" rx="1" />
-                  </svg>
-                </button>
+                  <rect y="9" width="16" height="2" rx="1" />
+                  <rect y="5" width="16" height="2" rx="1" />
+                  <rect y="1" width="16" height="2" rx="1" />
+                </svg>
               </Dialog.Trigger>
               <Dialog.Portal>
                 <Dialog.Content
                   className={clsx(
+                    font,
                     styles.menu,
                     "fixed top-0 right-0 bottom-0 left-0 overflow-y-scroll bg-white dark:bg-gray-dark flex flex-col px-4 group motion-safe:state-open:animate-fade-in motion-safe:state-closed:animate-fade-out"
                   )}
                   style={{ zIndex: 2147483647 }}
+                  aria-describedby={undefined}
                 >
+                  <Dialog.Title className="sr-only">
+                    Navigation menu
+                  </Dialog.Title>
                   <header className="py-4 flex justify-between items-center w-full">
                     {logo}
                     <Dialog.Close asChild>
@@ -245,7 +245,7 @@ export function PageContainer({ children }) {
         <div>
           <ul className="flex-1">
             <li>
-              <Email className="flex items-center inline-block font-bold text-lg sm:text-xl py-0.5" />
+              <Email className="inline-block font-bold text-lg sm:text-xl py-0.5" />
             </li>
             <li>
               <ExternalLink

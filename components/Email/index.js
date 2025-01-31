@@ -16,14 +16,15 @@ export function Email({ className }) {
   return isClipboardSupported ? (
     <>
       <button
+        type="button"
         className={className}
         onClick={() => {
           navigator.clipboard.writeText("emmanuel@emroussel.com");
           showCopyEmailToast();
         }}
-        aria-label="emmanuel@emroussel.com, copy email to clipboard"
       >
         emmanuel@emroussel.com
+        <span class="sr-only">, copy email to clipboard</span>
       </button>
     </>
   ) : (
