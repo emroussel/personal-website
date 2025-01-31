@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTheme } from "next-themes";
@@ -127,6 +127,8 @@ function ThemeButton({ isSmall }) {
 }
 
 export function PageContainer({ children }) {
+  const navUnderlineAnimationTimeoutRef = useRef();
+
   const logo = (
     <Link href="/">
       <a
@@ -142,13 +144,32 @@ export function PageContainer({ children }) {
     <div className="max-w-screen-lg mx-auto sm:pb-16 pb-8 min-h-screen flex flex-col px-4 sm:px-8">
       <header className="py-4 sm:py-6 flex justify-between items-center w-full z-10">
         {logo}
-        <nav>
+        <nav
+          onMouseEnter={() => {
+            if (navUnderlineAnimationTimeoutRef.current) {
+              clearTimeout(navUnderlineAnimationTimeoutRef.current);
+              navUnderlineAnimationTimeoutRef.current = null;
+            }
+          }}
+          onMouseLeave={(e) => {
+            if (navUnderlineAnimationTimeoutRef.current) {
+              return;
+            }
+
+            navUnderlineAnimationTimeoutRef.current = setTimeout(() => {
+              document.documentElement.style.setProperty(
+                "--emroussel-tab-hover-x",
+                ""
+              );
+            }, 300);
+          }}
+        >
           <div className="hidden sm:flex items-center">
             <div className="relative">
               <DesktopTab href="/about">About</DesktopTab>
               <DesktopTab href="/freelance">Freelance</DesktopTab>
               <DesktopTab href="/projects">Projects</DesktopTab>
-              <div className="h-[2px] w-[var(--emroussel-tab-hover-width)] rounded bg-secondary dark:bg-secondary-light absolute bottom-0 left-[var(--emroussel-tab-hover-x)] motion-safe:transition-[left,width] motion-safe:duration-300 motion-safe:ease-in-out" />
+              <div className="h-[2px] w-[var(--emroussel-tab-hover-width)] rounded bg-secondary dark:bg-secondary-light absolute bottom-0 left-[var(--emroussel-tab-hover-x)] motion-safe:transition-[left,width] motion-safe:duration-200 motion-safe:ease-in-out" />
             </div>
             <div className="ml-4">
               <ThemeButton isSmall />
