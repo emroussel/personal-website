@@ -2,7 +2,12 @@ const plugin = require("tailwindcss/plugin");
 const defaultConfig = require("tailwindcss/defaultConfig");
 
 module.exports = {
-  content: ["./pages/**/*.js", "./providers/**/*.js", "./components/**/*.js"],
+  content: [
+    "./pages/**/*.js",
+    "./providers/**/*.js",
+    "./components/**/*.js",
+    "./styles/**/*.{js,css}",
+  ],
   darkMode: "class",
   theme: {
     colors: {
